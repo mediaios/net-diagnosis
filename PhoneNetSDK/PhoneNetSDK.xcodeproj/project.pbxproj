@@ -1,0 +1,700 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA4DDD852174A188009F138B /* PhoneTraceRoute.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4DDD782174A188009F138B /* PhoneTraceRoute.h */; };
+		AA4DDD862174A188009F138B /* PhoneTraceRoute.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDD792174A188009F138B /* PhoneTraceRoute.mm */; };
+		AA4DDD872174A188009F138B /* PhoneTraceRouteService.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4DDD7A2174A188009F138B /* PhoneTraceRouteService.h */; };
+		AA4DDD882174A188009F138B /* PhoneTraceRouteService.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDD7B2174A188009F138B /* PhoneTraceRouteService.m */; };
+		AA4DDD892174A188009F138B /* PTracerRouteResModel.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4DDD7D2174A188009F138B /* PTracerRouteResModel.h */; };
+		AA4DDD8A2174A188009F138B /* PTracerRouteResModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDD7E2174A188009F138B /* PTracerRouteResModel.m */; };
+		AA4DDD972175F220009F138B /* PNetInfoTool.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4DDD952175F220009F138B /* PNetInfoTool.h */; };
+		AA4DDD982175F220009F138B /* PNetInfoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDD962175F220009F138B /* PNetInfoTool.m */; };
+		AAA8287122166AAB00440AEE /* UCNetworkService.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA8286F22166AAB00440AEE /* UCNetworkService.h */; };
+		AAA8287222166AAB00440AEE /* UCNetworkService.mm in Sources */ = {isa = PBXBuildFile; fileRef = AAA8287022166AAB00440AEE /* UCNetworkService.mm */; };
+		AAA82875221670AD00440AEE /* PNetReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA82873221670AD00440AEE /* PNetReachability.h */; };
+		AAA82876221670AD00440AEE /* PNetReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA82874221670AD00440AEE /* PNetReachability.m */; };
+		AAA8287A221686AE00440AEE /* PNetQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA82878221686AE00440AEE /* PNetQueue.m */; };
+		AAA8287B221686AE00440AEE /* PNetQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA82879221686AE00440AEE /* PNetQueue.h */; };
+		AAA8287E22168CD000440AEE /* PNetModel.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA8287C22168CD000440AEE /* PNetModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAA8287F22168CD000440AEE /* PNetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA8287D22168CD000440AEE /* PNetModel.m */; };
+		AAA828832216C6AE00440AEE /* log4cplus.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA828822216C6AE00440AEE /* log4cplus.h */; };
+		AAFC675721742DE900044085 /* PhoneNetSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFC674D21742DE900044085 /* PhoneNetSDK.framework */; };
+		AAFC675C21742DE900044085 /* PhoneNetSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC675B21742DE900044085 /* PhoneNetSDKTests.m */; };
+		AAFC675E21742DE900044085 /* PhoneNetSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFC675021742DE900044085 /* PhoneNetSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAFC677221742FB700044085 /* PhonePing.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFC676921742FB700044085 /* PhonePing.h */; };
+		AAFC677321742FB700044085 /* PhonePing.mm in Sources */ = {isa = PBXBuildFile; fileRef = AAFC676A21742FB700044085 /* PhonePing.mm */; };
+		AAFC677421742FB700044085 /* PhonePingService.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFC676B21742FB700044085 /* PhonePingService.h */; };
+		AAFC677521742FB700044085 /* PhonePingService.mm in Sources */ = {isa = PBXBuildFile; fileRef = AAFC676C21742FB700044085 /* PhonePingService.mm */; };
+		AAFC677621742FB700044085 /* PPingResModel.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFC676E21742FB700044085 /* PPingResModel.h */; };
+		AAFC677721742FB700044085 /* PPingResModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC676F21742FB700044085 /* PPingResModel.m */; };
+		AAFC677821742FB700044085 /* PReportPingModel.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFC677021742FB700044085 /* PReportPingModel.h */; };
+		AAFC677921742FB700044085 /* PReportPingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC677121742FB700044085 /* PReportPingModel.m */; };
+		AAFC677D2174311D00044085 /* PhoneNetDiagnosisHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFC677B2174311D00044085 /* PhoneNetDiagnosisHelper.h */; };
+		AAFC677E2174311D00044085 /* PhoneNetDiagnosisHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC677C2174311D00044085 /* PhoneNetDiagnosisHelper.m */; };
+		AAFC67802174317A00044085 /* NetAnalysisConst.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFC677F2174317A00044085 /* NetAnalysisConst.h */; };
+		AAFC6784217436E200044085 /* PhoneNetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFC6782217436E200044085 /* PhoneNetManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAFC6785217436E200044085 /* PhoneNetManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = AAFC6783217436E200044085 /* PhoneNetManager.mm */; };
+		AAFC67CD21743E7B00044085 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFC67CB21743E2A00044085 /* libstdc++.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AAFC675821742DE900044085 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAFC674421742DE900044085 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAFC674C21742DE900044085;
+			remoteInfo = PhoneNetSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AA4DDD782174A188009F138B /* PhoneTraceRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneTraceRoute.h; sourceTree = "<group>"; };
+		AA4DDD792174A188009F138B /* PhoneTraceRoute.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhoneTraceRoute.mm; sourceTree = "<group>"; };
+		AA4DDD7A2174A188009F138B /* PhoneTraceRouteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneTraceRouteService.h; sourceTree = "<group>"; };
+		AA4DDD7B2174A188009F138B /* PhoneTraceRouteService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneTraceRouteService.m; sourceTree = "<group>"; };
+		AA4DDD7D2174A188009F138B /* PTracerRouteResModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTracerRouteResModel.h; sourceTree = "<group>"; };
+		AA4DDD7E2174A188009F138B /* PTracerRouteResModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTracerRouteResModel.m; sourceTree = "<group>"; };
+		AA4DDD952175F220009F138B /* PNetInfoTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNetInfoTool.h; sourceTree = "<group>"; };
+		AA4DDD962175F220009F138B /* PNetInfoTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNetInfoTool.m; sourceTree = "<group>"; };
+		AAA8286F22166AAB00440AEE /* UCNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCNetworkService.h; sourceTree = "<group>"; };
+		AAA8287022166AAB00440AEE /* UCNetworkService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UCNetworkService.mm; sourceTree = "<group>"; };
+		AAA82873221670AD00440AEE /* PNetReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNetReachability.h; sourceTree = "<group>"; };
+		AAA82874221670AD00440AEE /* PNetReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNetReachability.m; sourceTree = "<group>"; };
+		AAA82878221686AE00440AEE /* PNetQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNetQueue.m; sourceTree = "<group>"; };
+		AAA82879221686AE00440AEE /* PNetQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNetQueue.h; sourceTree = "<group>"; };
+		AAA8287C22168CD000440AEE /* PNetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNetModel.h; sourceTree = "<group>"; };
+		AAA8287D22168CD000440AEE /* PNetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNetModel.m; sourceTree = "<group>"; };
+		AAA828822216C6AE00440AEE /* log4cplus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log4cplus.h; sourceTree = "<group>"; };
+		AAFC674D21742DE900044085 /* PhoneNetSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhoneNetSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAFC675021742DE900044085 /* PhoneNetSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneNetSDK.h; sourceTree = "<group>"; };
+		AAFC675121742DE900044085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAFC675621742DE900044085 /* PhoneNetSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneNetSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAFC675B21742DE900044085 /* PhoneNetSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneNetSDKTests.m; sourceTree = "<group>"; };
+		AAFC675D21742DE900044085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAFC676921742FB700044085 /* PhonePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhonePing.h; sourceTree = "<group>"; };
+		AAFC676A21742FB700044085 /* PhonePing.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhonePing.mm; sourceTree = "<group>"; };
+		AAFC676B21742FB700044085 /* PhonePingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhonePingService.h; sourceTree = "<group>"; };
+		AAFC676C21742FB700044085 /* PhonePingService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhonePingService.mm; sourceTree = "<group>"; };
+		AAFC676E21742FB700044085 /* PPingResModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPingResModel.h; sourceTree = "<group>"; };
+		AAFC676F21742FB700044085 /* PPingResModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPingResModel.m; sourceTree = "<group>"; };
+		AAFC677021742FB700044085 /* PReportPingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PReportPingModel.h; sourceTree = "<group>"; };
+		AAFC677121742FB700044085 /* PReportPingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PReportPingModel.m; sourceTree = "<group>"; };
+		AAFC677B2174311D00044085 /* PhoneNetDiagnosisHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNetDiagnosisHelper.h; sourceTree = "<group>"; };
+		AAFC677C2174311D00044085 /* PhoneNetDiagnosisHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNetDiagnosisHelper.m; sourceTree = "<group>"; };
+		AAFC677F2174317A00044085 /* NetAnalysisConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetAnalysisConst.h; sourceTree = SOURCE_ROOT; };
+		AAFC6782217436E200044085 /* PhoneNetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneNetManager.h; sourceTree = "<group>"; };
+		AAFC6783217436E200044085 /* PhoneNetManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PhoneNetManager.mm; sourceTree = "<group>"; };
+		AAFC67C921743E1E00044085 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		AAFC67CB21743E2A00044085 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAFC674921742DE900044085 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAFC675321742DE900044085 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAFC67CD21743E7B00044085 /* libstdc++.tbd in Frameworks */,
+				AAFC675721742DE900044085 /* PhoneNetSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA04BDA12179CA3900792244 /* bean */ = {
+			isa = PBXGroup;
+			children = (
+				AAA8287C22168CD000440AEE /* PNetModel.h */,
+				AAA8287D22168CD000440AEE /* PNetModel.m */,
+			);
+			path = bean;
+			sourceTree = "<group>";
+		};
+		AA4DDD762174A188009F138B /* utracert */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DDD772174A188009F138B /* control */,
+				AA4DDD7C2174A188009F138B /* model */,
+			);
+			name = utracert;
+			path = PhoneNetSDK/utracert;
+			sourceTree = SOURCE_ROOT;
+		};
+		AA4DDD772174A188009F138B /* control */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DDD782174A188009F138B /* PhoneTraceRoute.h */,
+				AA4DDD792174A188009F138B /* PhoneTraceRoute.mm */,
+				AA4DDD7A2174A188009F138B /* PhoneTraceRouteService.h */,
+				AA4DDD7B2174A188009F138B /* PhoneTraceRouteService.m */,
+			);
+			path = control;
+			sourceTree = "<group>";
+		};
+		AA4DDD7C2174A188009F138B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DDD7D2174A188009F138B /* PTracerRouteResModel.h */,
+				AA4DDD7E2174A188009F138B /* PTracerRouteResModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		AA4DDD942175EFE4009F138B /* netInfo */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DDD952175F220009F138B /* PNetInfoTool.h */,
+				AA4DDD962175F220009F138B /* PNetInfoTool.m */,
+				AAA82873221670AD00440AEE /* PNetReachability.h */,
+				AAA82874221670AD00440AEE /* PNetReachability.m */,
+			);
+			path = netInfo;
+			sourceTree = "<group>";
+		};
+		AAA8286D22166AAB00440AEE /* net */ = {
+			isa = PBXGroup;
+			children = (
+				AAA8286E22166AAB00440AEE /* control */,
+			);
+			path = net;
+			sourceTree = "<group>";
+		};
+		AAA8286E22166AAB00440AEE /* control */ = {
+			isa = PBXGroup;
+			children = (
+				AAA8286F22166AAB00440AEE /* UCNetworkService.h */,
+				AAA8287022166AAB00440AEE /* UCNetworkService.mm */,
+			);
+			path = control;
+			sourceTree = "<group>";
+		};
+		AAA828772216868900440AEE /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				AAA828822216C6AE00440AEE /* log4cplus.h */,
+				AAA82879221686AE00440AEE /* PNetQueue.h */,
+				AAA82878221686AE00440AEE /* PNetQueue.m */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		AAFC674321742DE900044085 = {
+			isa = PBXGroup;
+			children = (
+				AAFC674F21742DE900044085 /* PhoneNetSDK */,
+				AAFC675A21742DE900044085 /* PhoneNetSDKTests */,
+				AAFC674E21742DE900044085 /* Products */,
+				AAFC67C821743E1E00044085 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AAFC674E21742DE900044085 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAFC674D21742DE900044085 /* PhoneNetSDK.framework */,
+				AAFC675621742DE900044085 /* PhoneNetSDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAFC674F21742DE900044085 /* PhoneNetSDK */ = {
+			isa = PBXGroup;
+			children = (
+				AAFC6781217436B300044085 /* public */,
+				AAFC677A2174311D00044085 /* common */,
+				AAA828772216868900440AEE /* tools */,
+				AAFC676721742FB700044085 /* uping */,
+				AA4DDD762174A188009F138B /* utracert */,
+				AA4DDD942175EFE4009F138B /* netInfo */,
+				AAA8286D22166AAB00440AEE /* net */,
+				AAFC675021742DE900044085 /* PhoneNetSDK.h */,
+				AAFC677F2174317A00044085 /* NetAnalysisConst.h */,
+				AAFC675121742DE900044085 /* Info.plist */,
+			);
+			path = PhoneNetSDK;
+			sourceTree = "<group>";
+		};
+		AAFC675A21742DE900044085 /* PhoneNetSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				AAFC675B21742DE900044085 /* PhoneNetSDKTests.m */,
+				AAFC675D21742DE900044085 /* Info.plist */,
+			);
+			path = PhoneNetSDKTests;
+			sourceTree = "<group>";
+		};
+		AAFC676721742FB700044085 /* uping */ = {
+			isa = PBXGroup;
+			children = (
+				AAFC676821742FB700044085 /* control */,
+				AAFC676D21742FB700044085 /* model */,
+			);
+			path = uping;
+			sourceTree = SOURCE_ROOT;
+		};
+		AAFC676821742FB700044085 /* control */ = {
+			isa = PBXGroup;
+			children = (
+				AAFC676921742FB700044085 /* PhonePing.h */,
+				AAFC676A21742FB700044085 /* PhonePing.mm */,
+				AAFC676B21742FB700044085 /* PhonePingService.h */,
+				AAFC676C21742FB700044085 /* PhonePingService.mm */,
+			);
+			path = control;
+			sourceTree = "<group>";
+		};
+		AAFC676D21742FB700044085 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AAFC676E21742FB700044085 /* PPingResModel.h */,
+				AAFC676F21742FB700044085 /* PPingResModel.m */,
+				AAFC677021742FB700044085 /* PReportPingModel.h */,
+				AAFC677121742FB700044085 /* PReportPingModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		AAFC677A2174311D00044085 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				AAFC677B2174311D00044085 /* PhoneNetDiagnosisHelper.h */,
+				AAFC677C2174311D00044085 /* PhoneNetDiagnosisHelper.m */,
+			);
+			path = common;
+			sourceTree = SOURCE_ROOT;
+		};
+		AAFC6781217436B300044085 /* public */ = {
+			isa = PBXGroup;
+			children = (
+				AA04BDA12179CA3900792244 /* bean */,
+				AAFC6782217436E200044085 /* PhoneNetManager.h */,
+				AAFC6783217436E200044085 /* PhoneNetManager.mm */,
+			);
+			path = public;
+			sourceTree = "<group>";
+		};
+		AAFC67C821743E1E00044085 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAFC67CB21743E2A00044085 /* libstdc++.tbd */,
+				AAFC67C921743E1E00044085 /* libstdc++.6.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AAFC674A21742DE900044085 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA828832216C6AE00440AEE /* log4cplus.h in Headers */,
+				AAA8287B221686AE00440AEE /* PNetQueue.h in Headers */,
+				AAFC677221742FB700044085 /* PhonePing.h in Headers */,
+				AAA8287E22168CD000440AEE /* PNetModel.h in Headers */,
+				AAA82875221670AD00440AEE /* PNetReachability.h in Headers */,
+				AAA8287122166AAB00440AEE /* UCNetworkService.h in Headers */,
+				AAFC6784217436E200044085 /* PhoneNetManager.h in Headers */,
+				AA4DDD852174A188009F138B /* PhoneTraceRoute.h in Headers */,
+				AA4DDD972175F220009F138B /* PNetInfoTool.h in Headers */,
+				AA4DDD892174A188009F138B /* PTracerRouteResModel.h in Headers */,
+				AAFC675E21742DE900044085 /* PhoneNetSDK.h in Headers */,
+				AA4DDD872174A188009F138B /* PhoneTraceRouteService.h in Headers */,
+				AAFC67802174317A00044085 /* NetAnalysisConst.h in Headers */,
+				AAFC677421742FB700044085 /* PhonePingService.h in Headers */,
+				AAFC677621742FB700044085 /* PPingResModel.h in Headers */,
+				AAFC677D2174311D00044085 /* PhoneNetDiagnosisHelper.h in Headers */,
+				AAFC677821742FB700044085 /* PReportPingModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AAFC674C21742DE900044085 /* PhoneNetSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAFC676121742DE900044085 /* Build configuration list for PBXNativeTarget "PhoneNetSDK" */;
+			buildPhases = (
+				AAFC674821742DE900044085 /* Sources */,
+				AAFC674921742DE900044085 /* Frameworks */,
+				AAFC674A21742DE900044085 /* Headers */,
+				AAFC674B21742DE900044085 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhoneNetSDK;
+			productName = PhoneNetSDK;
+			productReference = AAFC674D21742DE900044085 /* PhoneNetSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AAFC675521742DE900044085 /* PhoneNetSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAFC676421742DE900044085 /* Build configuration list for PBXNativeTarget "PhoneNetSDKTests" */;
+			buildPhases = (
+				AAFC675221742DE900044085 /* Sources */,
+				AAFC675321742DE900044085 /* Frameworks */,
+				AAFC675421742DE900044085 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAFC675921742DE900044085 /* PBXTargetDependency */,
+			);
+			name = PhoneNetSDKTests;
+			productName = PhoneNetSDKTests;
+			productReference = AAFC675621742DE900044085 /* PhoneNetSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAFC674421742DE900044085 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = ucloud;
+				TargetAttributes = {
+					AAFC674C21742DE900044085 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					AAFC675521742DE900044085 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = AAFC674721742DE900044085 /* Build configuration list for PBXProject "PhoneNetSDK" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AAFC674321742DE900044085;
+			productRefGroup = AAFC674E21742DE900044085 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAFC674C21742DE900044085 /* PhoneNetSDK */,
+				AAFC675521742DE900044085 /* PhoneNetSDKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAFC674B21742DE900044085 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAFC675421742DE900044085 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAFC674821742DE900044085 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA82876221670AD00440AEE /* PNetReachability.m in Sources */,
+				AA4DDD982175F220009F138B /* PNetInfoTool.m in Sources */,
+				AA4DDD8A2174A188009F138B /* PTracerRouteResModel.m in Sources */,
+				AAFC6785217436E200044085 /* PhoneNetManager.mm in Sources */,
+				AA4DDD862174A188009F138B /* PhoneTraceRoute.mm in Sources */,
+				AAA8287F22168CD000440AEE /* PNetModel.m in Sources */,
+				AAFC677321742FB700044085 /* PhonePing.mm in Sources */,
+				AAA8287A221686AE00440AEE /* PNetQueue.m in Sources */,
+				AAFC677921742FB700044085 /* PReportPingModel.m in Sources */,
+				AAFC677E2174311D00044085 /* PhoneNetDiagnosisHelper.m in Sources */,
+				AAFC677521742FB700044085 /* PhonePingService.mm in Sources */,
+				AAFC677721742FB700044085 /* PPingResModel.m in Sources */,
+				AAA8287222166AAB00440AEE /* UCNetworkService.mm in Sources */,
+				AA4DDD882174A188009F138B /* PhoneTraceRouteService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAFC675221742DE900044085 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAFC675C21742DE900044085 /* PhoneNetSDKTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAFC675921742DE900044085 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAFC674C21742DE900044085 /* PhoneNetSDK */;
+			targetProxy = AAFC675821742DE900044085 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AAFC675F21742DE900044085 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AAFC676021742DE900044085 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AAFC676221742DE900044085 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CFP9KY4MGC;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/PhoneNetSDK/netInfo/PNetReachability.h\"";
+				INFOPLIST_FILE = PhoneNetSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.iosmedia.PhoneNetSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAFC676321742DE900044085 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CFP9KY4MGC;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/PhoneNetSDK/netInfo/PNetReachability.h\"";
+				INFOPLIST_FILE = PhoneNetSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.iosmedia.PhoneNetSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AAFC676521742DE900044085 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CFP9KY4MGC;
+				INFOPLIST_FILE = PhoneNetSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ucloud.PhoneNetSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAFC676621742DE900044085 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CFP9KY4MGC;
+				INFOPLIST_FILE = PhoneNetSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ucloud.PhoneNetSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAFC674721742DE900044085 /* Build configuration list for PBXProject "PhoneNetSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAFC675F21742DE900044085 /* Debug */,
+				AAFC676021742DE900044085 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAFC676121742DE900044085 /* Build configuration list for PBXNativeTarget "PhoneNetSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAFC676221742DE900044085 /* Debug */,
+				AAFC676321742DE900044085 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAFC676421742DE900044085 /* Build configuration list for PBXNativeTarget "PhoneNetSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAFC676521742DE900044085 /* Debug */,
+				AAFC676621742DE900044085 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAFC674421742DE900044085 /* Project object */;
+}
