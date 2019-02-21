@@ -7,7 +7,7 @@
 //
 
 #import "PhoneNetDiagnosisHelper.h"
-#import "NetAnalysisConst.h"
+#import "PhoneNetSDKConst.h"
 
 @implementation PhoneNetDiagnosisHelper
 

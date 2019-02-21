@@ -7,7 +7,7 @@
 //
 
 #import "PhoneTraceRoute.h"
-#import "NetAnalysisConst.h"
+#import "PhoneNetSDKConst.h"
 #import "PNetQueue.h"
 #import "log4cplus.h"
 

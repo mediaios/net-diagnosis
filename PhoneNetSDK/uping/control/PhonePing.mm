@@ -7,7 +7,7 @@
 //
 
 #import "PhonePing.h"
-#import "NetAnalysisConst.h"
+#import "PhoneNetSDKConst.h"
 #include "log4cplus.h"
 #import "PNetQueue.h"
 

@@ -11,7 +11,7 @@
 #import "PhoneTraceRouteService.h"
 #import "PNetReachability.h"
 #import "UCNetworkService.h"
-#import "NetAnalysisConst.h"
+#import "PhoneNetSDKConst.h"
 #import "log4cplus.h"
 #import "PNetModel.h"
 #import "PNetInfoTool.h"
@@ -167,7 +167,7 @@ static PhoneNetManager *sdkManager_instance = nil;
 
 - (void)netGetDevicePublicIpInfo
 {
-    [UCNetworkService uHttpGetRequestWithUrl:U_Get_Public_Ip_Url functionModule:@"GetDevicePublicIpInfo" timeout:10.0 completionHandler:^(NSData * _Nullable data, NSError * _Nullable error) {
+    [UCNetworkService uHttpGetRequestWithUrl:PhoneNet_Get_Public_Ip_Url functionModule:@"GetDevicePublicIpInfo" timeout:10.0 completionHandler:^(NSData * _Nullable data, NSError * _Nullable error) {
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         if (error || dict == nil) {
             log4cplus_warn("PhoneNetSDK", "get public ip error , content is nil..");

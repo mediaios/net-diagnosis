@@ -37,7 +37,7 @@
 		AAFC677921742FB700044085 /* PReportPingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC677121742FB700044085 /* PReportPingModel.m */; };
 		AAFC677D2174311D00044085 /* PhoneNetDiagnosisHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFC677B2174311D00044085 /* PhoneNetDiagnosisHelper.h */; };
 		AAFC677E2174311D00044085 /* PhoneNetDiagnosisHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC677C2174311D00044085 /* PhoneNetDiagnosisHelper.m */; };
-		AAFC67802174317A00044085 /* NetAnalysisConst.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFC677F2174317A00044085 /* NetAnalysisConst.h */; };
+		AAFC67802174317A00044085 /* PhoneNetSDKConst.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFC677F2174317A00044085 /* PhoneNetSDKConst.h */; };
 		AAFC6784217436E200044085 /* PhoneNetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFC6782217436E200044085 /* PhoneNetManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAFC6785217436E200044085 /* PhoneNetManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = AAFC6783217436E200044085 /* PhoneNetManager.mm */; };
 		AAFC67CD21743E7B00044085 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFC67CB21743E2A00044085 /* libstdc++.tbd */; };
@@ -87,7 +87,7 @@
 		AAFC677121742FB700044085 /* PReportPingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PReportPingModel.m; sourceTree = "<group>"; };
 		AAFC677B2174311D00044085 /* PhoneNetDiagnosisHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNetDiagnosisHelper.h; sourceTree = "<group>"; };
 		AAFC677C2174311D00044085 /* PhoneNetDiagnosisHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNetDiagnosisHelper.m; sourceTree = "<group>"; };
-		AAFC677F2174317A00044085 /* NetAnalysisConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetAnalysisConst.h; sourceTree = SOURCE_ROOT; };
+		AAFC677F2174317A00044085 /* PhoneNetSDKConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNetSDKConst.h; sourceTree = SOURCE_ROOT; };
 		AAFC6782217436E200044085 /* PhoneNetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneNetManager.h; sourceTree = "<group>"; };
 		AAFC6783217436E200044085 /* PhoneNetManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PhoneNetManager.mm; sourceTree = "<group>"; };
 		AAFC67C921743E1E00044085 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
@@ -221,7 +221,7 @@
 				AA4DDD942175EFE4009F138B /* netInfo */,
 				AAA8286D22166AAB00440AEE /* net */,
 				AAFC675021742DE900044085 /* PhoneNetSDK.h */,
-				AAFC677F2174317A00044085 /* NetAnalysisConst.h */,
+				AAFC677F2174317A00044085 /* PhoneNetSDKConst.h */,
 				AAFC675121742DE900044085 /* Info.plist */,
 			);
 			path = PhoneNetSDK;
@@ -314,7 +314,7 @@
 				AA4DDD892174A188009F138B /* PTracerRouteResModel.h in Headers */,
 				AAFC675E21742DE900044085 /* PhoneNetSDK.h in Headers */,
 				AA4DDD872174A188009F138B /* PhoneTraceRouteService.h in Headers */,
-				AAFC67802174317A00044085 /* NetAnalysisConst.h in Headers */,
+				AAFC67802174317A00044085 /* PhoneNetSDKConst.h in Headers */,
 				AAFC677421742FB700044085 /* PhonePingService.h in Headers */,
 				AAFC677621742FB700044085 /* PPingResModel.h in Headers */,
 				AAFC677D2174311D00044085 /* PhoneNetDiagnosisHelper.h in Headers */,

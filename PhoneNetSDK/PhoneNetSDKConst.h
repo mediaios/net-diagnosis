@@ -6,8 +6,8 @@
 //  Copyright © 2018 mediaios. All rights reserved.
 //
 
-#ifndef UNetAnalysisConst_h
-#define UNetAnalysisConst_h
+#ifndef PhoneNetSDKConst_h
+#define PhoneNetSDKConst_h
 
 
 /**********   For log4cplus    *************/
@@ -16,21 +16,13 @@
 #endif
 
 /***********  About http Interface   ***********/
-#define     U_Get_Public_Ip_Url   @"http://ipinfo.io/json"   //get public ip info interface
+#define     PhoneNet_Get_Public_Ip_Url   @"http://ipinfo.io/json"   //get public ip info interface
 
 
 /***********      Global define       ***********/
 #define      PhoneNotification       [NSNotificationCenter defaultCenter]
-#define      UCUserDefaults       [NSUserDefaults standardUserDefaults]
 
 /***********      Ping model       ***********/
 #define   KPingIcmpIdBeginNum     8000
-
-
-typedef enum  Enum_Tracert_UC_Hosts_State
-{
-    Enum_Tracert_UC_Hosts_State_Doing = 0,
-    Enum_Tracert_UC_Hosts_State_Complete
-}Enum_Tracert_UC_Hosts_State;
 
 #endif /* NetAnalysisConst_h */

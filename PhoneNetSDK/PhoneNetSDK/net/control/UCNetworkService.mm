@@ -7,7 +7,7 @@
 //
 
 #import "UCNetworkService.h"
-#import "NetAnalysisConst.h"
+#import "PhoneNetSDKConst.h"
 #import "log4cplus.h"
 
 @interface UCNetworkService()
