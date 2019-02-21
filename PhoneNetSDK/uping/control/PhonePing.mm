@@ -109,7 +109,7 @@
         _pingPacketCount = count;
     }
     
-    [PNetQueue pnet_ping_sync:^{
+    [PNetQueue pnet_ping_async:^{
         [self sendAndrecevPingPacket];
     }];
 }
@@ -121,7 +121,6 @@
     BOOL isReceiverRemoteIpPingRes = NO;
     
     do {
-
         uint16_t identifier = (uint16_t)(KPingIcmpIdBeginNum + index);
         UICMPPacket *packet = [PhoneNetDiagnosisHelper constructPacketWithSeq:index andIdentifier:identifier];
         _sendDate = [NSDate date];

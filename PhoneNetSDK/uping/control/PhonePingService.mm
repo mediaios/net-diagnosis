@@ -13,7 +13,6 @@
 
 @interface PhonePingService()<PhonePingDelegate>
 @property (nonatomic,strong) PhonePing *uPing;
-@property (nonatomic,strong) dispatch_queue_t serialQueue;
 @property (nonatomic,strong) NSMutableDictionary *pingResDic;
 @property (nonatomic,copy,readonly) NetPingResultHandler pingResultHandler;
 
@@ -40,15 +39,6 @@ static PhonePingService *ucPingservice_instance = NULL;
     return _pingResDic;
 }
 
-- (dispatch_queue_t)serialQueue
-{
-    if (!_serialQueue) {
-        _serialQueue = dispatch_queue_create("sq_pingres",
-                                             DISPATCH_QUEUE_SERIAL);
-    }
-    return _serialQueue;
-}
-
 + (instancetype)shareInstance
 {
     if (ucPingservice_instance == NULL) {
@@ -73,37 +63,32 @@ static PhonePingService *ucPingservice_instance = NULL;
         return;
     }
     
-    dispatch_async(self.serialQueue, ^{
-        NSMutableArray *pingItems = [self.pingResDic objectForKey:host];
-        if (pingItems == NULL) {
-            pingItems = [NSMutableArray arrayWithArray:@[pingItem]];
-        }else{
+    NSMutableArray *pingItems = [self.pingResDic objectForKey:host];
+    if (pingItems == NULL) {
+        pingItems = [NSMutableArray arrayWithArray:@[pingItem]];
+    }else{
 
-            try {
-                [pingItems addObject:pingItem];
-            } catch (NSException *exception) {
-                log4cplus_warn("PhoneNetPing", "func: %s, exception info: %s , line: %d",__func__,[exception.description UTF8String],__LINE__);
-            }
+        try {
+            [pingItems addObject:pingItem];
+        } catch (NSException *exception) {
+            log4cplus_warn("PhoneNetPing", "func: %s, exception info: %s , line: %d",__func__,[exception.description UTF8String],__LINE__);
         }
-        
-
-        [self.pingResDic setObject:pingItems forKey:host];
+    }
+    
+    [self.pingResDic setObject:pingItems forKey:host];
 //        NSLog(@"%@",self.pingResDic);
 
-        
-        if (pingItem.status == PhoneNetPingStatusFinished) {
-            NSArray *pingItems = [self.pingResDic objectForKey:host];
-            NSDictionary *dict = [PPingResModel pingResultWithPingItems:pingItems];
+    if (pingItem.status == PhoneNetPingStatusFinished) {
+        NSArray *pingItems = [self.pingResDic objectForKey:host];
+        NSDictionary *dict = [PPingResModel pingResultWithPingItems:pingItems];
 //            NSLog(@"dict----res:%@, pingRes:%@",dict,self.pingResDic);
-            PReportPingModel *reportPingModel = [PReportPingModel uReporterPingmodelWithDict:dict];
-            
-            NSString *pingSummary = [NSString stringWithFormat:@"%d packets transmitted , loss:%d , delay:%0.3fms , ttl:%d",reportPingModel.totolPackets,reportPingModel.loss,reportPingModel.delay,reportPingModel.ttl];
-            self.pingResultHandler(pingSummary);
-            
-            [self removePingResFromPingResContainerWithHostName:host];
-        }
+        PReportPingModel *reportPingModel = [PReportPingModel uReporterPingmodelWithDict:dict];
         
-    });
+        NSString *pingSummary = [NSString stringWithFormat:@"%d packets transmitted , loss:%d , delay:%0.3fms , ttl:%d",reportPingModel.totolPackets,reportPingModel.loss,reportPingModel.delay,reportPingModel.ttl];
+        self.pingResultHandler(pingSummary);
+        
+        [self removePingResFromPingResContainerWithHostName:host];
+    }
 }
 
 - (void)removePingResFromPingResContainerWithHostName:(NSString *)host
@@ -111,9 +96,7 @@ static PhonePingService *ucPingservice_instance = NULL;
     if (host == NULL) {
         return;
     }
-    dispatch_async(self.serialQueue, ^{
-        [self.pingResDic removeObjectForKey:host];
-    });
+    [self.pingResDic removeObjectForKey:host];
 }
 
 - (void)startPingHost:(NSString *)host packetCount:(int)count resultHandler:(NetPingResultHandler)handler

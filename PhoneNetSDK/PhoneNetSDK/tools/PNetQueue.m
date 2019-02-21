@@ -38,7 +38,7 @@
     return self;
 }
 
-+ (void)pnet_ping_sync:(dispatch_block_t)block
++ (void)pnet_ping_async:(dispatch_block_t)block
 {
     dispatch_async([PNetQueue shareInstance].pingQueue, ^{
         block();
