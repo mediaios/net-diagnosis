@@ -47,6 +47,13 @@ typedef void(^NetTracerouteResultHandler)(NSString *_Nullable tracertRes ,NSStri
 
 - (void)registPhoneNetSDK;
 
+
+/**
+ @brief get SDK version
+ @return sdk version
+ */
+- (NSString * _Nonnull)sdkVersion;
+
 #pragma mark - about ping
 /*！
  @description

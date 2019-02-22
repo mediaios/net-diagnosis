@@ -90,6 +90,11 @@ static PhoneNetManager *sdkManager_instance = nil;
     [self checkNetworkStatusWithReachability:self.reachability];
 }
 
+- (NSString * _Nonnull)sdkVersion
+{
+    return PhoneNetSDKVersion;
+}
+
 +(id)allocWithZone:(struct _NSZone *)zone
 {
     return [PhoneNetManager shareInstance];
