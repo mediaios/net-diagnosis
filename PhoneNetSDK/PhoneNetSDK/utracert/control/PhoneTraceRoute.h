@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PhoneNetDiagnosisHelper.h"
 #import "PTracerRouteResModel.h"
+#import "PhoneNetDiagnosisHelper.h"
 
 const int kTracertRouteCount_noRes               = 5;     // 连续无响应的route个数
 const int kTracertMaxTTL                         = 30;    // Max 30 hops（最多30跳）

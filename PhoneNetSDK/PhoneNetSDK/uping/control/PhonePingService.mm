@@ -8,7 +8,7 @@
 
 #import "PhonePingService.h"
 #import "PhoneNetSDKConst.h"
-#import "log4cplus.h"
+#include "log4cplus.h"
 
 
 @interface PhonePingService()<PhonePingDelegate>
