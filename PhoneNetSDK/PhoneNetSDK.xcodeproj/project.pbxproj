@@ -26,6 +26,8 @@
 		AA4DDD8A2174A188009F138B /* PTracerRouteResModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDD7E2174A188009F138B /* PTracerRouteResModel.m */; };
 		AA4DDD972175F220009F138B /* PNetInfoTool.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4DDD952175F220009F138B /* PNetInfoTool.h */; };
 		AA4DDD982175F220009F138B /* PNetInfoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDD962175F220009F138B /* PNetInfoTool.m */; };
+		AA99ACC622266F6D0099A2E3 /* PNetLog.h in Headers */ = {isa = PBXBuildFile; fileRef = AA99ACC422266F6D0099A2E3 /* PNetLog.h */; };
+		AA99ACC722266F6D0099A2E3 /* PNetLog.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA99ACC522266F6D0099A2E3 /* PNetLog.mm */; };
 		AAA8287122166AAB00440AEE /* UCNetworkService.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA8286F22166AAB00440AEE /* UCNetworkService.h */; };
 		AAA8287222166AAB00440AEE /* UCNetworkService.mm in Sources */ = {isa = PBXBuildFile; fileRef = AAA8287022166AAB00440AEE /* UCNetworkService.mm */; };
 		AAA82875221670AD00440AEE /* PNetReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA82873221670AD00440AEE /* PNetReachability.h */; };
@@ -34,7 +36,8 @@
 		AAA8287B221686AE00440AEE /* PNetQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA82879221686AE00440AEE /* PNetQueue.h */; };
 		AAA8287E22168CD000440AEE /* PNetModel.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA8287C22168CD000440AEE /* PNetModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAA8287F22168CD000440AEE /* PNetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA8287D22168CD000440AEE /* PNetModel.m */; };
-		AAA828832216C6AE00440AEE /* log4cplus.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA828822216C6AE00440AEE /* log4cplus.h */; };
+		AAA828832216C6AE00440AEE /* log4cplus_pn.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA828822216C6AE00440AEE /* log4cplus_pn.h */; };
+		AAE53C77222675B500DB23A7 /* PhoneNetSDKHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAE53C76222675B500DB23A7 /* PhoneNetSDKHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAFC675721742DE900044085 /* PhoneNetSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFC674D21742DE900044085 /* PhoneNetSDK.framework */; };
 		AAFC675C21742DE900044085 /* PhoneNetSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC675B21742DE900044085 /* PhoneNetSDKTests.m */; };
 		AAFC675E21742DE900044085 /* PhoneNetSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFC675021742DE900044085 /* PhoneNetSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -73,6 +76,8 @@
 		AA4DDD7E2174A188009F138B /* PTracerRouteResModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTracerRouteResModel.m; sourceTree = "<group>"; };
 		AA4DDD952175F220009F138B /* PNetInfoTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNetInfoTool.h; sourceTree = "<group>"; };
 		AA4DDD962175F220009F138B /* PNetInfoTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNetInfoTool.m; sourceTree = "<group>"; };
+		AA99ACC422266F6D0099A2E3 /* PNetLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNetLog.h; sourceTree = "<group>"; };
+		AA99ACC522266F6D0099A2E3 /* PNetLog.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PNetLog.mm; sourceTree = "<group>"; };
 		AAA8286F22166AAB00440AEE /* UCNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCNetworkService.h; sourceTree = "<group>"; };
 		AAA8287022166AAB00440AEE /* UCNetworkService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UCNetworkService.mm; sourceTree = "<group>"; };
 		AAA82873221670AD00440AEE /* PNetReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNetReachability.h; sourceTree = "<group>"; };
@@ -81,7 +86,8 @@
 		AAA82879221686AE00440AEE /* PNetQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNetQueue.h; sourceTree = "<group>"; };
 		AAA8287C22168CD000440AEE /* PNetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNetModel.h; sourceTree = "<group>"; };
 		AAA8287D22168CD000440AEE /* PNetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNetModel.m; sourceTree = "<group>"; };
-		AAA828822216C6AE00440AEE /* log4cplus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log4cplus.h; sourceTree = "<group>"; };
+		AAA828822216C6AE00440AEE /* log4cplus_pn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log4cplus_pn.h; sourceTree = "<group>"; };
+		AAE53C76222675B500DB23A7 /* PhoneNetSDKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNetSDKHelper.h; sourceTree = "<group>"; };
 		AAFC674D21742DE900044085 /* PhoneNetSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhoneNetSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFC675021742DE900044085 /* PhoneNetSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneNetSDK.h; sourceTree = "<group>"; };
 		AAFC675121742DE900044085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -224,9 +230,11 @@
 		AAA828772216868900440AEE /* tools */ = {
 			isa = PBXGroup;
 			children = (
-				AAA828822216C6AE00440AEE /* log4cplus.h */,
+				AAA828822216C6AE00440AEE /* log4cplus_pn.h */,
 				AAA82879221686AE00440AEE /* PNetQueue.h */,
 				AAA82878221686AE00440AEE /* PNetQueue.m */,
+				AA99ACC422266F6D0099A2E3 /* PNetLog.h */,
+				AA99ACC522266F6D0099A2E3 /* PNetLog.mm */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -256,8 +264,8 @@
 				AAFC6781217436B300044085 /* public */,
 				AA466F7F221FBCD1009CD053 /* common */,
 				AA466F84221FBCDA009CD053 /* uping */,
-				AAA828772216868900440AEE /* tools */,
 				AA4DDD762174A188009F138B /* utracert */,
+				AAA828772216868900440AEE /* tools */,
 				AA4DDD942175EFE4009F138B /* netInfo */,
 				AAA8286D22166AAB00440AEE /* net */,
 				AAFC675021742DE900044085 /* PhoneNetSDK.h */,
@@ -280,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				AA04BDA12179CA3900792244 /* bean */,
+				AAE53C76222675B500DB23A7 /* PhoneNetSDKHelper.h */,
 				AAFC6782217436E200044085 /* PhoneNetManager.h */,
 				AAFC6783217436E200044085 /* PhoneNetManager.mm */,
 			);
@@ -302,7 +311,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAA828832216C6AE00440AEE /* log4cplus.h in Headers */,
+				AAA828832216C6AE00440AEE /* log4cplus_pn.h in Headers */,
+				AAE53C77222675B500DB23A7 /* PhoneNetSDKHelper.h in Headers */,
 				AA466F7E221FA113009CD053 /* PhoneNetSDKConst.h in Headers */,
 				AAA8287B221686AE00440AEE /* PNetQueue.h in Headers */,
 				AAA8287E22168CD000440AEE /* PNetModel.h in Headers */,
@@ -312,6 +322,7 @@
 				AAFC6784217436E200044085 /* PhoneNetManager.h in Headers */,
 				AA4DDD852174A188009F138B /* PhoneTraceRoute.h in Headers */,
 				AA466F95221FBCDA009CD053 /* PReportPingModel.h in Headers */,
+				AA99ACC622266F6D0099A2E3 /* PNetLog.h in Headers */,
 				AA466F91221FBCDA009CD053 /* PhonePingService.h in Headers */,
 				AA466F8F221FBCDA009CD053 /* PhonePing.h in Headers */,
 				AA4DDD972175F220009F138B /* PNetInfoTool.h in Headers */,
@@ -419,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAA82876221670AD00440AEE /* PNetReachability.m in Sources */,
+				AA99ACC722266F6D0099A2E3 /* PNetLog.mm in Sources */,
 				AA4DDD982175F220009F138B /* PNetInfoTool.m in Sources */,
 				AA4DDD8A2174A188009F138B /* PTracerRouteResModel.m in Sources */,
 				AA466F90221FBCDA009CD053 /* PhonePing.mm in Sources */,
@@ -583,7 +595,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
 				GCC_INPUT_FILETYPE = automatic;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/PhoneNetSDK/tools/log4cplus_pn.h\"";
 				INFOPLIST_FILE = PhoneNetSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -615,7 +627,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
 				GCC_INPUT_FILETYPE = automatic;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/PhoneNetSDK/tools/log4cplus_pn.h\"";
 				INFOPLIST_FILE = PhoneNetSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

@@ -9,7 +9,7 @@
 #import "PhoneTraceRoute.h"
 #import "PhoneNetSDKConst.h"
 #import "PNetQueue.h"
-#include "log4cplus.h"
+#include "log4cplus_pn.h"
 
 typedef enum PNetRecTracertIcmpType{
     PNetRecTracertIcmpType_None = 0,

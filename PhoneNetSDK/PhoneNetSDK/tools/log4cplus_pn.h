@@ -16,11 +16,6 @@
     extern int PhoneNetSDK_IOS_FLAG_WARN;
     extern int PhoneNetSDK_IOS_FLAG_INFO;
     extern int PhoneNetSDK_IOS_FLAG_DEBUG;
-class PhoneNetSDKLog{
-public:
-    static void Init(void * configuration = NULL){}
-	static void Destroy(){}
-};
 
 #define log4cplus_fatal(category, logFmt, ...) \
 do { \
@@ -51,14 +46,6 @@ do { \
     if(PhoneNetSDK_IOS_LOG_LEVEL & PhoneNetSDK_IOS_FLAG_DEBUG) \
         syslog(LOG_WARNING, "%s:" logFmt, #category,##__VA_ARGS__); \
 }while(0)
-
-inline void log4cplus_init(const char* configuration = NULL){
-    openlog("PhoneNetSDK", LOG_NDELAY|LOG_PID|LOG_CONS, LOG_USER);
-}
-
-inline void log4cplus_destroy(){
-    closelog();
-}
 
 
 #endif

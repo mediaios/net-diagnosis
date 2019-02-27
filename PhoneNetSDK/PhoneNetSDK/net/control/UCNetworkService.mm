@@ -8,7 +8,7 @@
 
 #import "UCNetworkService.h"
 #import "PhoneNetSDKConst.h"
-#include "log4cplus.h"
+#include "log4cplus_pn.h"
 
 @interface UCNetworkService()
 
