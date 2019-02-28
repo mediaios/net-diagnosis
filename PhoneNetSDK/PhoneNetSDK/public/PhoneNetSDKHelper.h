@@ -40,5 +40,7 @@ typedef void(^NetTracerouteResultHandler)(NSString *_Nullable tracertRes ,NSStri
 #pragma mark -nslookup callback
 typedef void (^NetLookupResultHandler)(NSMutableArray<DomainLookUpRes *>  *_Nullable lookupRes, PNError *_Nullable sdkError);
 
+#pragma mark -portscan callback
+typedef void (^NetPortScanHandler)(NSString * _Nullable port, BOOL isOpen, PNError * _Nullable sdkError);
 
 #endif /* PhoneNetSDKHelper_h */

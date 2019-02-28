@@ -17,6 +17,7 @@
 #import "PNetLog.h"
 #include "log4cplus_pn.h"
 #import "PNDomainLookup.h"
+#import "PNPortScan.h"
 
 
 @interface PhoneNetManager()
@@ -77,12 +78,20 @@ static PhoneNetManager *sdkManager_instance = nil;
 
 - (void)netStartPing:(NSString *_Nonnull)host packetCount:(int)count pingResultHandler:(NetPingResultHandler _Nonnull)handler
 {
+    if (!handler) {
+        @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"no pingResultHandler" userInfo:nil];
+        return;
+    }
     [[PhonePingService shareInstance] startPingHost:host packetCount:count resultHandler:handler];
 }
 
 
 - (void)netStartTraceroute:(NSString *_Nonnull)host tracerouteResultHandler:(NetTracerouteResultHandler _Nonnull)handler
 {
+    if (!handler) {
+        @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"no tracerouteResultHandler" userInfo:nil];
+        return;
+    }
     [[PhoneTraceRouteService shareInstance] startTracerouteHost:host resultHandler:handler];
 }
 
@@ -98,7 +107,33 @@ static PhoneNetManager *sdkManager_instance = nil;
 
 - (void)netLookupDomain:(NSString * _Nonnull)domain completeHandler:(NetLookupResultHandler _Nonnull)handler
 {
+    if (!handler) {
+        @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"no lookup complete Handler" userInfo:nil];
+        return;
+    }
     [[PNDomainLookup shareInstance] lookupDomain:domain completeHandler:handler];
+}
+
+- (void)netPortScan:(NSString * _Nonnull)host
+          beginPort:(NSUInteger)beginPort
+            endPort:(NSUInteger)endPort
+    completeHandler:(NetPortScanHandler)handler
+{
+    if (!handler) {
+        @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"no port scan complete Handler" userInfo:nil];
+        return;
+    }
+    [[PNPortScan shareInstance] portScan:host beginPort:beginPort endPort:endPort completeHandler:handler];
+}
+
+- (BOOL)isDoingPortScan
+{
+    return [[PNPortScan shareInstance] isDoingScanPort];
+}
+
+- (void)netStopPortScan
+{
+    [[PNPortScan shareInstance] stopPortScan];
 }
 
 - (void)networkChange:(NSNotification *)noti

@@ -11,7 +11,6 @@
 
 
 @interface PhoneNetSDKTests : XCTestCase
-@property (nonatomic,strong) PNDomainLookup *domainLookup;
 @end
 
 @implementation PhoneNetSDKTests
@@ -20,7 +19,7 @@
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
     
-    _domainLookup = [[PNDomainLookup alloc] init];
+
 }
 
 - (void)tearDown {
@@ -51,6 +50,20 @@
     }];
 }
 
+- (void)testPortScan
+{
+    [[PhoneNetManager shareInstance] netPortScan:@"www.baidu.com" beginPort:8000 endPort:9000 completeHandler:^(NSString * _Nullable port, BOOL isOpen, PNError * _Nullable sdkError) {
+        if (sdkError) {
+            NSLog(@"正在扫描---%@",port);
+        }else{
+            if (isOpen) {
+                NSLog(@"正在扫描---%@ ,已打开",port);
+            }else{
+                NSLog(@"正在扫描---%@",port);
+            }
+        }
+    }];
+}
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.

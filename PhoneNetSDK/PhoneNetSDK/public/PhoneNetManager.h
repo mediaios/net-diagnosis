@@ -87,12 +87,44 @@
 #pragma mark - nslookup
 /**
  @description
+ lookup host
 
  @param domain domain
  @param handler nslookup results
  */
 - (void)netLookupDomain:(NSString * _Nonnull)domain completeHandler:(NetLookupResultHandler _Nonnull)handler;
 
+#pragma mark - port scan
+
+
+/**
+ @description
+ port scan host
+
+ @param host host address
+ @param beginPort begin port
+ @param endPort end port
+ @param handler port scan result handler
+ */
+- (void)netPortScan:(NSString * _Nonnull)host
+          beginPort:(NSUInteger)beginPort
+            endPort:(NSUInteger)endPort
+    completeHandler:(NetPortScanHandler _Nonnull)handler;
+
+
+/**
+ @description is doing port scan or not
+
+ @return YES: doing   NO: not doing
+ */
+- (BOOL)isDoingPortScan;
+
+
+/**
+ @description
+ stop port scan
+ */
+- (void)netStopPortScan;
 #pragma mark -About network info
 - (NetWorkInfo * _Nullable)netGetNetworkInfo;
 
