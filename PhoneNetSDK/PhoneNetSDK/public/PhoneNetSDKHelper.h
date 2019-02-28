@@ -8,6 +8,7 @@
 
 #ifndef PhoneNetSDKHelper_h
 #define PhoneNetSDKHelper_h
+#import "PNetModel.h"
 
 
 /**
@@ -30,9 +31,14 @@ typedef NS_ENUM(NSUInteger,PhoneNetSDKLogLevel)
     PhoneNetSDKLogLevel_DEBUG
 };
 
-
+#pragma mark -ping callback
 typedef void(^NetPingResultHandler)(NSString *_Nullable pingres);
+
+#pragma mark -tracert callback
 typedef void(^NetTracerouteResultHandler)(NSString *_Nullable tracertRes ,NSString *_Nullable destIp);
+
+#pragma mark -nslookup callback
+typedef void (^NetLookupResultHandler)(NSMutableArray<DomainLookUpRes *>  *_Nullable lookupRes, PNError *_Nullable sdkError);
 
 
 #endif /* PhoneNetSDKHelper_h */

@@ -9,6 +9,67 @@
 #import "PNetModel.h"
 #import "PNetInfoTool.h"
 
+
+static  NSString *domain = @"mediaios.sdk";
+static const int KPNInvalidArguments = -2;
+static const int KPNInvalidElements  = -3;
+static const int KPNInvalidCondition = -4;
+
+@implementation PNError
+
+- (instancetype)initWithSysError:(NSError *)error
+{
+    if (self = [super init]) {
+        _error = error;
+    }
+    return self;
+}
+
++ (instancetype)errorWithInvalidArgument:(NSString *)desc
+{
+    NSError *error = [[NSError alloc] initWithDomain:domain code:KPNInvalidArguments userInfo:@{@"error":desc}];
+    return [[self alloc] initWithSysError:error];
+}
+
++ (instancetype)errorWithInvalidElements:(NSString *)desc
+{
+    NSError *error = [[NSError alloc] initWithDomain:domain code:KPNInvalidElements userInfo:@{@"error":desc}];
+    return [[self alloc] initWithSysError:error];
+}
+
++ (instancetype)errorWithInvalidCondition:(NSString *)desc
+{
+    NSError *error = [[NSError alloc] initWithDomain:domain code:KPNInvalidCondition userInfo:@{@"error":desc}];
+    return [[self alloc] initWithSysError:error];
+}
+
++ (instancetype)errorWithError:(NSError *)error
+{
+    return [[self alloc] initWithSysError:error];
+}
+
+@end
+
+
+@implementation DomainLookUpRes
+
+- (instancetype)initWithName:(NSString *)name address:(NSString *)address
+{
+    if (self = [super init]) {
+        _name = name;
+        _ip = address;
+    }
+    return self;
+}
+
++ (instancetype)instanceWithName:(NSString *)name address:(NSString *)address
+{
+    return [[self alloc] initWithName:name address:address];
+}
+
+@end
+
+
 @implementation PDeviceNetInfo
 
 - (instancetype)init

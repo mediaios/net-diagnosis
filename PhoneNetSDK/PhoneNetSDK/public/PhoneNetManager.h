@@ -84,6 +84,15 @@
  */
 - (BOOL)isDoingTraceroute;
 
+#pragma mark - nslookup
+/**
+ @description
+
+ @param domain domain
+ @param handler nslookup results
+ */
+- (void)netLookupDomain:(NSString * _Nonnull)domain completeHandler:(NetLookupResultHandler _Nonnull)handler;
+
 #pragma mark -About network info
 - (NetWorkInfo * _Nullable)netGetNetworkInfo;
 

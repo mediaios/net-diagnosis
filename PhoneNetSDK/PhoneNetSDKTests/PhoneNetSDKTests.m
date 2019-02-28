@@ -7,10 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <PhoneNetSDK/PhoneNetSDK.h>
 
 
 @interface PhoneNetSDKTests : XCTestCase
-
+@property (nonatomic,strong) PNDomainLookup *domainLookup;
 @end
 
 @implementation PhoneNetSDKTests
@@ -18,6 +19,8 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    _domainLookup = [[PNDomainLookup alloc] init];
 }
 
 - (void)tearDown {
@@ -34,6 +37,20 @@
 {
     
 }
+
+- (void)testDomainLookup
+{
+    [[PhoneNetManager shareInstance] netLookupDomain:@"www.google.com" completeHandler:^(NSMutableArray<DomainLookUpRes *> * _Nullable lookupRes, PNError * _Nullable sdkError) {
+        if (sdkError) {
+            NSLog(@"%@",sdkError.error.description);
+        }else{
+            for (DomainLookUpRes *res in lookupRes) {
+                NSLog(@"%@->%@",res.name,res.ip);
+            }
+        }
+    }];
+}
+
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.

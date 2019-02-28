@@ -16,6 +16,7 @@
 #import "PNetInfoTool.h"
 #import "PNetLog.h"
 #include "log4cplus_pn.h"
+#import "PNDomainLookup.h"
 
 
 @interface PhoneNetManager()
@@ -93,6 +94,11 @@ static PhoneNetManager *sdkManager_instance = nil;
 - (BOOL)isDoingTraceroute
 {
     return [[PhoneTraceRouteService shareInstance] uIsTracert];
+}
+
+- (void)netLookupDomain:(NSString * _Nonnull)domain completeHandler:(NetLookupResultHandler _Nonnull)handler
+{
+    [[PNDomainLookup shareInstance] lookupDomain:domain completeHandler:handler];
 }
 
 - (void)networkChange:(NSNotification *)noti
