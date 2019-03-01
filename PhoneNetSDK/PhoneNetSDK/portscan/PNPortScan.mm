@@ -50,8 +50,10 @@ static PNPortScan *pnPortScan_instance = NULL;
     struct in_addr * remoteInAddr = (struct in_addr *)remoteHostEnt->h_addr_list[0];
     self.isStopPortScan = NO;
     NSUInteger port = beginPort;
-    
     do {
+        if (port > endPort) {
+            break;
+        }
         socket_client = socket(AF_INET, SOCK_STREAM, 0);
         if (-1 == socket_client) {
             return;
