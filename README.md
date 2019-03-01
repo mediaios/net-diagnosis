@@ -51,6 +51,22 @@ In addition, you need to add `-lc++`,`-ObjC`,`$(inherited)` to the project's `Bu
   }];
 ```
 
+### nslookup 
+
+```
+[[PhoneNetManager shareInstance] netLookupDomain:@"www.google.com" completeHandler:^(NSMutableArray<DomainLookUpRes *> * _Nullable lookupRes, PNError * _Nullable sdkError) {
+	// your processing logic
+}];
+```
+
+### port scan
+
+```
+[[PhoneNetManager shareInstance] netPortScan:@"www.baidu.com" beginPort:8000 endPort:9000 completeHandler:^(NSString * _Nullable port, BOOL isOpen, PNError * _Nullable sdkError) {
+	// your processing logic    
+}];
+```
+
 ### Ohter functions
 
 * Setting SDK log level

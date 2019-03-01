@@ -50,6 +50,22 @@ pod 'PhoneNetSDK'
   }];
 ```
 
+### 根据域名查ip(nslookup)
+
+```
+[[PhoneNetManager shareInstance] netLookupDomain:@"www.google.com" completeHandler:^(NSMutableArray<DomainLookUpRes *> * _Nullable lookupRes, PNError * _Nullable sdkError) {
+	// your processing logic
+}];
+```
+
+### 端口扫描
+
+```
+[[PhoneNetManager shareInstance] netPortScan:@"www.baidu.com" beginPort:8000 endPort:9000 completeHandler:^(NSString * _Nullable port, BOOL isOpen, PNError * _Nullable sdkError) {
+	// your processing logic    
+}];
+```
+
 ### 其它功能
 
 * 设置SDK的日志级别
