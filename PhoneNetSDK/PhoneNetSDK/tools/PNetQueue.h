@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)pnet_ping_async:(dispatch_block_t)block;
 + (void)pnet_trace_async:(dispatch_block_t)block;
++ (void)pnet_async:(dispatch_block_t)block;
 
 @end
 

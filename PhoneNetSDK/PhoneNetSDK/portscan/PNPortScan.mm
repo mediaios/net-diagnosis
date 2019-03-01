@@ -10,6 +10,7 @@
 #import "PhoneNetSDKConst.h"
 #include "log4cplus_pn.h"
 #import "PhoneNetDiagnosisHelper.h"
+#import "PNetQueue.h"
 @interface PNPortScan()
 {
     int socket_client;
@@ -23,7 +24,9 @@
 static PNPortScan *pnPortScan_instance = NULL;
 - (instancetype)init
 {
-    if (self = [super init]) {}
+    if (self = [super init]) {
+        _isStopPortScan = YES;
+    }
     return self;
 }
 
@@ -35,7 +38,7 @@ static PNPortScan *pnPortScan_instance = NULL;
     return pnPortScan_instance;
 }
 
-- (void)portScan:(NSString *)host beginPort:(NSUInteger)beginPort endPort:(NSUInteger)endPort completeHandler:(NetPortScanHandler)handler
+- (void)startPortScan:(NSString *)host beginPort:(NSUInteger)beginPort endPort:(NSUInteger)endPort completeHandler:(NetPortScanHandler)handler
 {
     // 获取 IP 地址
     struct hostent * remoteHostEnt = gethostbyname([host UTF8String]);
@@ -71,9 +74,16 @@ static PNPortScan *pnPortScan_instance = NULL;
     self.isStopPortScan = YES;
 }
 
+- (void)portScan:(NSString *)host beginPort:(NSUInteger)beginPort endPort:(NSUInteger)endPort completeHandler:(NetPortScanHandler)handler
+{
+    [PNetQueue pnet_async:^{
+        [self  startPortScan:host beginPort:beginPort endPort:endPort completeHandler:handler];
+    }];
+}
+
 - (BOOL)isDoingScanPort
 {
-    return self.isStopPortScan;
+    return !self.isStopPortScan;
 }
 
 - (void)stopPortScan

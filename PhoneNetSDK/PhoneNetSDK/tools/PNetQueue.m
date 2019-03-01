@@ -13,6 +13,7 @@
 
 @property (nonatomic) dispatch_queue_t pingQueue;
 @property (nonatomic) dispatch_queue_t traceQueue;
+@property (nonatomic) dispatch_queue_t asyncQueue;
 
 @end
 
@@ -34,6 +35,7 @@
     if (self = [super init]) {
         _pingQueue = dispatch_queue_create("pnet_ping_queue", DISPATCH_QUEUE_SERIAL);
         _traceQueue = dispatch_queue_create("pnet_trace_queue", DISPATCH_QUEUE_SERIAL);
+        _asyncQueue = dispatch_queue_create("Pnet_async_queue", DISPATCH_QUEUE_SERIAL);
     }
     return self;
 }
@@ -48,6 +50,13 @@
 + (void)pnet_trace_async:(dispatch_block_t)block
 {
     dispatch_async([PNetQueue shareInstance].traceQueue , ^{
+        block();
+    });
+}
+
++ (void)pnet_async:(dispatch_block_t)block
+{
+    dispatch_async([PNetQueue shareInstance].asyncQueue, ^{
         block();
     });
 }
