@@ -42,6 +42,12 @@ pod 'PhoneNetSDK'
   }];
 ```
 
+### TCP ping 
+
+```
+
+```
+
 ### traceroute
 
 ```

@@ -19,3 +19,5 @@ FOUNDATION_EXPORT const unsigned char PhoneNetSDKVersionString[];
 #import <PhoneNetSDK/PhoneNetManager.h>
 #import <PhoneNetSDK/PNetModel.h>
 #import <PhoneNetSDK/PhoneNetSDKHelper.h>
+#import <PhoneNetSDK/PNTcpPing.h>
+#import <PhoneNetSDK/PNUdpTraceroute.h>
