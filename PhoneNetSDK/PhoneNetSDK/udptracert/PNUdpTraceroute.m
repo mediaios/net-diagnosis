@@ -159,6 +159,10 @@
     close(socket_send);
     close(socket_recv);
     
+    if (!_isStop) {
+        _isStop = YES;
+    }
+    
     [_traceDetails appendString:@"udp traceroute complete...\n"];
     _complete(_traceDetails);
 //    NSLog(@"udp traceroute complete...");

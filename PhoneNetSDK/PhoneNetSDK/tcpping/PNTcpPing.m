@@ -146,6 +146,7 @@
     if (_isStop) {
         code = -5;
     }
+    _isStop = YES;
     
     dispatch_async(dispatch_get_main_queue(), ^(void) {
         PNTcpPingResult *pingRes  = [self constPingRes:code ip:ip durations:intervals loss:loss count:self.count];
