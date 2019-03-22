@@ -45,15 +45,28 @@ pod 'PhoneNetSDK'
 ### TCP ping 
 
 ```
-
+_tcpPing = [PNTcpPing start:hostDomain port:portNum.integerValue count:3 complete:^(NSMutableString *pingres) {
+	// your processing logic
+}];
 ```
 
 ### traceroute
 
+
+在命令行中默认的traceroute命令发的是UDP的包(简称 udp traceroute)：
 ```
  [[PhoneNetManager shareInstance] netStartTraceroute:@"www.baidu.com" tracerouteResultHandler:^(NSString * _Nullable tracertRes, NSString * _Nullable destIp) {
      // your processing logic                
   }];
+```
+
+### ICMP traceroute 
+
+在mac的terminal中，输入`traceroute -I baidu.com` 就是采用ICMP协议的方式做traceroute. sdk中提供了这种功能：
+```
+ _udpTraceroute = [PNUdpTraceroute start:ip complete:^(NSMutableString *res) {
+                    // your processinig logic
+                }];
 ```
 
 ### 根据域名查ip(nslookup)
@@ -76,6 +89,7 @@ pod 'PhoneNetSDK'
 
 * 设置SDK的日志级别
 * 获取设备的公网ip信息
+* 随着版本的迭代，会提供更多高级功能
 
 ## 联系我们
 
