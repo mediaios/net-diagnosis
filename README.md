@@ -51,14 +51,14 @@ _tcpPing = [PNTcpPing start:hostDomain port:portNum.integerValue count:3 complet
 }];
 ```
 
-### traceroute
+### UDP traceroute
 
 The default traceroute command on the command line sends a UDP packet (referred to as udp traceroute):
 
 ```
- [[PhoneNetManager shareInstance] netStartTraceroute:@"www.baidu.com" tracerouteResultHandler:^(NSString * _Nullable tracertRes, NSString * _Nullable destIp) {
-     // your processing logic                
-  }];
+ _udpTraceroute = [PNUdpTraceroute start:ip complete:^(NSMutableString *res) {
+                    // your processinig logic
+                }];
 ```
 
 ### ICMP traceroute
@@ -66,9 +66,9 @@ The default traceroute command on the command line sends a UDP packet (referred 
 In the terminal of mac, enter `traceroute -I baidu.com` to use the ICMP protocol to do traceroute. This function is provided in sdk:
 
 ```
- _udpTraceroute = [PNUdpTraceroute start:ip complete:^(NSMutableString *res) {
-                    // your processinig logic
-                }];
+ [[PhoneNetManager shareInstance] netStartTraceroute:@"www.baidu.com" tracerouteResultHandler:^(NSString * _Nullable tracertRes, NSString * _Nullable destIp) {
+     // your processing logic                
+  }];
 ```
 
 ### nslookup 
