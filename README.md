@@ -102,9 +102,38 @@ In the terminal of mac, enter `traceroute -I baidu.com` to use the ICMP protocol
 * Setting SDK log level
 * Get device public ip info 
 
+## NetPinger-Example
+
+Ios platform network diagnostic APP (using the SDK), support ping and domain name ping, traceroute (udp, icmp protocol), support tcp ping, port scan, nslookup and other functions.
+
+Simply go to the directory where the `Podfile` file is located and install the SDK to run successfully.
+
+
+```
+macdeiMac:NetPinger ethan$ pod install 
+Analyzing dependencies
+Downloading dependencies
+Installing PhoneNetSDK (1.0.7)
+Generating Pods project
+Integrating client project
+
+[!] Please close any current Xcode sessions and use `NetPinger.xcworkspace` for this project from now on.
+Sending stats
+Pod installation complete! There is 1 dependency from the Podfile and 1 total pod installed.
+```
+
+### Project origin
+
+In development, you often encounter problems with the interface (DNS resolution error, etc.), so you need to detect whether the mobile terminal to the server's network is not connected, so you need to interrupt `ping` on the mobile phone, but the free network detection tool on the market. Most have pop-up ads affecting the experience (eg: iNetTools), so it is necessary to develop a web drama detection app.
+
+### Implementation
+
+All functions are implemented using the functions provided by the SDK. The pages and icons are mainly imitating the `NetWork Utility` on the MAC, and hope to provide a valuable reference for your application.
+
 
 ## Contact us 
 
 * If you have any questions or need any feature, please submit [issue](https://github.com/mediaios/net-diagnosis/issues)
 * If you want to contribute, please submit pull request
+* Welcome `star` & `fork`
 
