@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TracertViewController">
+            <connections>
+                <outlet property="ipTF" destination="hJi-so-jZf" id="t7T-xa-ZL9"/>
+                <outlet property="traceBtn" destination="SQ4-AO-Uux" id="zUY-F9-CfY"/>
+                <outlet property="traceResTV" destination="EEe-cT-lxR" id="fOg-e5-qyN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CLD-rS-Ugi">
+                    <rect key="frame" x="0.0" y="64" width="375" height="85"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter an Internet address to trace the route to." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liB-pu-um7">
+                            <rect key="frame" x="5" y="0.0" width="370" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="mv7-XT-gTc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hJi-so-jZf">
+                            <rect key="frame" x="5" y="23" width="290" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="HgI-db-Xyk"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQ4-AO-Uux">
+                            <rect key="frame" x="315" y="17.5" width="50" height="50"/>
+                            <color key="backgroundColor" red="0.19318530649999999" green="0.66666668650000005" blue="0.084953171280000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="N0W-5T-4Lu"/>
+                                <constraint firstAttribute="width" constant="50" id="zBN-Mv-gQC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="Trace">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onpressedButtonTrace:" destination="-1" eventType="touchUpInside" id="Qli-Io-1fD"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(ex. 10.0.2.1 or www.example.com)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRx-in-ZTc">
+                            <rect key="frame" x="5" y="63" width="370" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="ibj-va-mhA"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="sRx-in-ZTc" secondAttribute="trailing" id="3Ns-mx-LXY"/>
+                        <constraint firstAttribute="trailing" secondItem="liB-pu-um7" secondAttribute="trailing" id="C8a-kl-QJg"/>
+                        <constraint firstItem="hJi-so-jZf" firstAttribute="top" secondItem="liB-pu-um7" secondAttribute="bottom" constant="2" id="Ee5-ie-jBU"/>
+                        <constraint firstItem="liB-pu-um7" firstAttribute="leading" secondItem="CLD-rS-Ugi" secondAttribute="leading" constant="5" id="KQz-bh-V2l"/>
+                        <constraint firstItem="SQ4-AO-Uux" firstAttribute="leading" secondItem="hJi-so-jZf" secondAttribute="trailing" constant="20" id="Np1-fq-MaP"/>
+                        <constraint firstItem="liB-pu-um7" firstAttribute="top" secondItem="CLD-rS-Ugi" secondAttribute="top" id="RJq-XZ-Beo"/>
+                        <constraint firstItem="SQ4-AO-Uux" firstAttribute="centerY" secondItem="hJi-so-jZf" secondAttribute="centerY" id="RXZ-63-t7b"/>
+                        <constraint firstAttribute="height" constant="85" id="hNX-K4-sHV"/>
+                        <constraint firstItem="hJi-so-jZf" firstAttribute="leading" secondItem="CLD-rS-Ugi" secondAttribute="leading" constant="5" id="ipN-6j-8mA"/>
+                        <constraint firstItem="sRx-in-ZTc" firstAttribute="leading" secondItem="CLD-rS-Ugi" secondAttribute="leading" constant="5" id="o0B-6Y-oKA"/>
+                        <constraint firstAttribute="trailing" secondItem="SQ4-AO-Uux" secondAttribute="trailing" constant="10" id="xCC-vU-ZFr"/>
+                        <constraint firstItem="sRx-in-ZTc" firstAttribute="top" secondItem="hJi-so-jZf" secondAttribute="bottom" id="xOC-SP-vnv"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EEe-cT-lxR">
+                    <rect key="frame" x="0.0" y="149" width="375" height="518"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="EEe-cT-lxR" secondAttribute="trailing" id="5nd-pz-Ohd"/>
+                <constraint firstItem="EEe-cT-lxR" firstAttribute="top" secondItem="CLD-rS-Ugi" secondAttribute="bottom" id="7nx-2T-c5i"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="EEe-cT-lxR" secondAttribute="bottom" id="AbZ-Bx-5Pq"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="CLD-rS-Ugi" secondAttribute="trailing" id="JeD-aP-cJ8"/>
+                <constraint firstItem="CLD-rS-Ugi" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="Zhg-MZ-QrH"/>
+                <constraint firstItem="CLD-rS-Ugi" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="aqt-sB-hKm"/>
+                <constraint firstItem="EEe-cT-lxR" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="ddU-cm-baI"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

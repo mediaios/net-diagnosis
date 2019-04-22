@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LookupViewController">
+            <connections>
+                <outlet property="hostTF" destination="Gzd-yr-TYQ" id="qza-Om-JYg"/>
+                <outlet property="lookupResTV" destination="baS-SF-ags" id="wA7-9J-QaK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCB-31-jfu">
+                    <rect key="frame" x="0.0" y="64" width="375" height="85"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter an Internet address to lookup." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQ6-aQ-2Kk">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="C4q-Xa-ePW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gzd-yr-TYQ">
+                            <rect key="frame" x="5" y="22.5" width="290" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="kZS-ec-5yc"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTZ-ji-bzf">
+                            <rect key="frame" x="315" y="17.5" width="50" height="50"/>
+                            <color key="backgroundColor" red="0.13562683070000001" green="0.59636738580000004" blue="0.080022338580000005" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="9zf-kk-CCo"/>
+                                <constraint firstAttribute="height" constant="50" id="Acj-zo-drF"/>
+                            </constraints>
+                            <state key="normal" title="Start">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onpressedBtnLookup:" destination="-1" eventType="touchUpInside" id="QCi-na-RsJ"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(ex. 10.0.2.1 or www.example.com)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZC-Eg-iia">
+                            <rect key="frame" x="5" y="62.5" width="370" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="JoI-0f-SPR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="PTZ-ji-bzf" firstAttribute="leading" secondItem="Gzd-yr-TYQ" secondAttribute="trailing" constant="20" id="3Ry-tJ-8cx"/>
+                        <constraint firstItem="WZC-Eg-iia" firstAttribute="leading" secondItem="cCB-31-jfu" secondAttribute="leading" constant="5" id="GTp-Tx-Knn"/>
+                        <constraint firstItem="Gzd-yr-TYQ" firstAttribute="centerY" secondItem="cCB-31-jfu" secondAttribute="centerY" id="HWm-gt-WHd"/>
+                        <constraint firstItem="AQ6-aQ-2Kk" firstAttribute="top" secondItem="cCB-31-jfu" secondAttribute="top" id="JkQ-Fc-oFh"/>
+                        <constraint firstItem="PTZ-ji-bzf" firstAttribute="centerY" secondItem="cCB-31-jfu" secondAttribute="centerY" id="ODh-yj-0Vw"/>
+                        <constraint firstAttribute="trailing" secondItem="WZC-Eg-iia" secondAttribute="trailing" id="RZw-7G-iqy"/>
+                        <constraint firstAttribute="trailing" secondItem="PTZ-ji-bzf" secondAttribute="trailing" constant="10" id="Udk-bC-vyv"/>
+                        <constraint firstItem="Gzd-yr-TYQ" firstAttribute="leading" secondItem="cCB-31-jfu" secondAttribute="leading" constant="5" id="fUz-SJ-J6X"/>
+                        <constraint firstItem="WZC-Eg-iia" firstAttribute="top" secondItem="Gzd-yr-TYQ" secondAttribute="bottom" id="hez-oO-58X"/>
+                        <constraint firstAttribute="trailing" secondItem="AQ6-aQ-2Kk" secondAttribute="trailing" id="joD-q1-xot"/>
+                        <constraint firstItem="AQ6-aQ-2Kk" firstAttribute="leading" secondItem="cCB-31-jfu" secondAttribute="leading" id="pOu-y3-utu"/>
+                        <constraint firstAttribute="height" constant="85" id="zM4-6J-LPK"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="baS-SF-ags">
+                    <rect key="frame" x="0.0" y="149" width="375" height="518"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="baS-SF-ags" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="D8h-bX-626"/>
+                <constraint firstItem="baS-SF-ags" firstAttribute="top" secondItem="cCB-31-jfu" secondAttribute="bottom" id="JeL-jC-egh"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="baS-SF-ags" secondAttribute="trailing" id="V15-ML-bOe"/>
+                <constraint firstItem="cCB-31-jfu" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="alM-8B-SQO"/>
+                <constraint firstItem="cCB-31-jfu" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="kW1-9b-FtN"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="baS-SF-ags" secondAttribute="bottom" id="pIe-fI-xnz"/>
+                <constraint firstItem="cCB-31-jfu" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="xrb-zO-xeP"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
+        </view>
+    </objects>
+</document>

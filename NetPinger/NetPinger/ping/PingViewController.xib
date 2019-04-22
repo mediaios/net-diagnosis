@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PingViewController">
+            <connections>
+                <outlet property="pingBtn" destination="jE1-Sd-IdP" id="Nf2-iM-UTf"/>
+                <outlet property="pingResTV" destination="ZzX-eE-WPC" id="6tp-ZU-uVC"/>
+                <outlet property="pingTF" destination="utI-nB-8Pe" id="J1W-TQ-QrF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWW-fl-cfj">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="utI-nB-8Pe">
+                            <rect key="frame" x="5" y="23" width="290" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Pxn-8G-FRQ"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" tag="999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jE1-Sd-IdP">
+                            <rect key="frame" x="315" y="18" width="50" height="50"/>
+                            <color key="backgroundColor" red="0.2196078431372549" green="0.6588235294117647" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="HFQ-sX-FL6"/>
+                                <constraint firstAttribute="height" constant="50" id="Ydh-sx-Nb0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="Ping">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onpressedButtonPing:" destination="-1" eventType="touchUpInside" id="gom-hH-v4I"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter an Internet address to ping." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8da-wT-Ikb">
+                            <rect key="frame" x="5" y="0.0" width="370" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="peD-2u-55x"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(ex. 10.0.2.1 or www.example.com)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ku-Cs-24p">
+                            <rect key="frame" x="5" y="63" width="370" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="MQe-ah-tTR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="jE1-Sd-IdP" secondAttribute="trailing" constant="10" id="1D8-Dg-yLp"/>
+                        <constraint firstAttribute="height" constant="85" id="2Na-Eg-kMn"/>
+                        <constraint firstItem="utI-nB-8Pe" firstAttribute="leading" secondItem="SWW-fl-cfj" secondAttribute="leading" constant="5" id="E5f-dg-mIv"/>
+                        <constraint firstItem="jE1-Sd-IdP" firstAttribute="leading" secondItem="utI-nB-8Pe" secondAttribute="trailing" constant="20" id="GnD-mv-LcX"/>
+                        <constraint firstItem="8da-wT-Ikb" firstAttribute="top" secondItem="SWW-fl-cfj" secondAttribute="top" id="T2n-1e-fx4"/>
+                        <constraint firstItem="1Ku-Cs-24p" firstAttribute="top" secondItem="utI-nB-8Pe" secondAttribute="bottom" id="UeS-Ts-Zqw"/>
+                        <constraint firstItem="utI-nB-8Pe" firstAttribute="top" secondItem="8da-wT-Ikb" secondAttribute="bottom" constant="2" id="l94-g8-Q2n"/>
+                        <constraint firstAttribute="trailing" secondItem="1Ku-Cs-24p" secondAttribute="trailing" id="qQM-hZ-fjb"/>
+                        <constraint firstItem="8da-wT-Ikb" firstAttribute="leading" secondItem="SWW-fl-cfj" secondAttribute="leading" constant="5" id="qTK-lt-iey"/>
+                        <constraint firstAttribute="trailing" secondItem="8da-wT-Ikb" secondAttribute="trailing" id="uyC-K0-zQf"/>
+                        <constraint firstItem="jE1-Sd-IdP" firstAttribute="centerY" secondItem="utI-nB-8Pe" secondAttribute="centerY" id="vZe-YQ-9Ly"/>
+                        <constraint firstItem="1Ku-Cs-24p" firstAttribute="leading" secondItem="SWW-fl-cfj" secondAttribute="leading" constant="5" id="zcx-mD-K4i"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZzX-eE-WPC">
+                    <rect key="frame" x="0.0" y="85" width="375" height="518"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="ZzX-eE-WPC" secondAttribute="bottom" id="14U-Sq-kvA"/>
+                <constraint firstItem="ZzX-eE-WPC" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="H7a-x0-Laz"/>
+                <constraint firstItem="SWW-fl-cfj" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="VFa-Gl-Tp2"/>
+                <constraint firstItem="ZzX-eE-WPC" firstAttribute="top" secondItem="SWW-fl-cfj" secondAttribute="bottom" id="Xgu-2Q-P6d"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="ZzX-eE-WPC" secondAttribute="trailing" id="ckl-He-V7n"/>
+                <constraint firstItem="SWW-fl-cfj" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="pmk-Zc-5QB"/>
+                <constraint firstItem="SWW-fl-cfj" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="sfj-vq-Akj"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

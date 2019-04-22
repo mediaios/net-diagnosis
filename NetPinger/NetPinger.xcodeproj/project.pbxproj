@@ -1,0 +1,824 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A393ECA980F74C6A0B1E2CB1 /* libPods-NetPinger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E35020A7135574F06DC3D8 /* libPods-NetPinger.a */; };
+		AA4DDDAB217708A3009F138B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDDAA217708A3009F138B /* AppDelegate.m */; };
+		AA4DDDB1217708A3009F138B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA4DDDAF217708A3009F138B /* Main.storyboard */; };
+		AA4DDDB3217708A5009F138B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA4DDDB2217708A5009F138B /* Assets.xcassets */; };
+		AA4DDDB6217708A5009F138B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA4DDDB4217708A5009F138B /* LaunchScreen.storyboard */; };
+		AA4DDDB9217708A5009F138B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDDB8217708A5009F138B /* main.m */; };
+		AA4DDDC3217708A5009F138B /* NetPingerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDDC2217708A5009F138B /* NetPingerTests.m */; };
+		AA4DDDCE217708A5009F138B /* NetPingerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDDCD217708A5009F138B /* NetPingerUITests.m */; };
+		AA4DDDDD21770B50009F138B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDDDC21770B50009F138B /* MainViewController.m */; };
+		AA4DDDE121771698009F138B /* MainItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDDDF21771698009F138B /* MainItemCell.m */; };
+		AA4DDDE221771698009F138B /* MainItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA4DDDE021771698009F138B /* MainItemCell.xib */; };
+		AA4DDDE6217722BE009F138B /* MainItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDDE5217722BE009F138B /* MainItemInfo.m */; };
+		AA4DDDEE21773919009F138B /* PingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDDEC21773919009F138B /* PingViewController.m */; };
+		AA4DDDEF21773919009F138B /* PingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA4DDDED21773919009F138B /* PingViewController.xib */; };
+		AA4DDDF421773AB4009F138B /* DeviceNetInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDDF221773AB4009F138B /* DeviceNetInfoViewController.m */; };
+		AA4DDDF521773AB4009F138B /* DeviceNetInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA4DDDF321773AB4009F138B /* DeviceNetInfoViewController.xib */; };
+		AA4DDDFA21773ACE009F138B /* TracertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDDF821773ACE009F138B /* TracertViewController.m */; };
+		AA4DDDFB21773ACE009F138B /* TracertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA4DDDF921773ACE009F138B /* TracertViewController.xib */; };
+		AA4DDE0121773C0D009F138B /* PortScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDDFF21773C0D009F138B /* PortScanViewController.m */; };
+		AA4DDE0221773C0D009F138B /* PortScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA4DDE0021773C0D009F138B /* PortScanViewController.xib */; };
+		AA4DDE0621773C1C009F138B /* LookupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DDE0421773C1C009F138B /* LookupViewController.m */; };
+		AA4DDE0721773C1C009F138B /* LookupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA4DDE0521773C1C009F138B /* LookupViewController.xib */; };
+		AA829BAA223B3B7F0007E397 /* TcpPingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA829BA8223B3B7F0007E397 /* TcpPingViewController.m */; };
+		AA829BAB223B3B7F0007E397 /* TcpPingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA829BA9223B3B7F0007E397 /* TcpPingViewController.xib */; };
+		AA829BAF223B8E3D0007E397 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA829BAE223B8E3D0007E397 /* SettingViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA4DDDBF217708A5009F138B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA4DDD9E217708A3009F138B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA4DDDA5217708A3009F138B;
+			remoteInfo = NetPinger;
+		};
+		AA4DDDCA217708A5009F138B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA4DDD9E217708A3009F138B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA4DDDA5217708A3009F138B;
+			remoteInfo = NetPinger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		59954CC808A8C146B47DA643 /* Pods-NetPinger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetPinger.release.xcconfig"; path = "Target Support Files/Pods-NetPinger/Pods-NetPinger.release.xcconfig"; sourceTree = "<group>"; };
+		94E35020A7135574F06DC3D8 /* libPods-NetPinger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetPinger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA04BD8721782EA200792244 /* NetPingerConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetPingerConst.h; sourceTree = "<group>"; };
+		AA124C93DBDB44038A17FFE4 /* Pods-NetPinger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetPinger.debug.xcconfig"; path = "Target Support Files/Pods-NetPinger/Pods-NetPinger.debug.xcconfig"; sourceTree = "<group>"; };
+		AA4DDDA6217708A3009F138B /* NetPinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetPinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA4DDDA9217708A3009F138B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AA4DDDAA217708A3009F138B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AA4DDDB0217708A3009F138B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA4DDDB2217708A5009F138B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA4DDDB5217708A5009F138B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AA4DDDB7217708A5009F138B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA4DDDB8217708A5009F138B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AA4DDDBE217708A5009F138B /* NetPingerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetPingerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA4DDDC2217708A5009F138B /* NetPingerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetPingerTests.m; sourceTree = "<group>"; };
+		AA4DDDC4217708A5009F138B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA4DDDC9217708A5009F138B /* NetPingerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetPingerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA4DDDCD217708A5009F138B /* NetPingerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetPingerUITests.m; sourceTree = "<group>"; };
+		AA4DDDCF217708A5009F138B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA4DDDDB21770B50009F138B /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		AA4DDDDC21770B50009F138B /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		AA4DDDDE21771698009F138B /* MainItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainItemCell.h; sourceTree = "<group>"; };
+		AA4DDDDF21771698009F138B /* MainItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainItemCell.m; sourceTree = "<group>"; };
+		AA4DDDE021771698009F138B /* MainItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainItemCell.xib; sourceTree = "<group>"; };
+		AA4DDDE4217722BE009F138B /* MainItemInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainItemInfo.h; sourceTree = "<group>"; };
+		AA4DDDE5217722BE009F138B /* MainItemInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainItemInfo.m; sourceTree = "<group>"; };
+		AA4DDDEB21773918009F138B /* PingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PingViewController.h; sourceTree = "<group>"; };
+		AA4DDDEC21773919009F138B /* PingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PingViewController.m; sourceTree = "<group>"; };
+		AA4DDDED21773919009F138B /* PingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PingViewController.xib; sourceTree = "<group>"; };
+		AA4DDDF121773AB4009F138B /* DeviceNetInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceNetInfoViewController.h; sourceTree = "<group>"; };
+		AA4DDDF221773AB4009F138B /* DeviceNetInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceNetInfoViewController.m; sourceTree = "<group>"; };
+		AA4DDDF321773AB4009F138B /* DeviceNetInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceNetInfoViewController.xib; sourceTree = "<group>"; };
+		AA4DDDF721773ACE009F138B /* TracertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TracertViewController.h; sourceTree = "<group>"; };
+		AA4DDDF821773ACE009F138B /* TracertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TracertViewController.m; sourceTree = "<group>"; };
+		AA4DDDF921773ACE009F138B /* TracertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TracertViewController.xib; sourceTree = "<group>"; };
+		AA4DDDFE21773C0D009F138B /* PortScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PortScanViewController.h; sourceTree = "<group>"; };
+		AA4DDDFF21773C0D009F138B /* PortScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PortScanViewController.m; sourceTree = "<group>"; };
+		AA4DDE0021773C0D009F138B /* PortScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortScanViewController.xib; sourceTree = "<group>"; };
+		AA4DDE0321773C1C009F138B /* LookupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LookupViewController.h; sourceTree = "<group>"; };
+		AA4DDE0421773C1C009F138B /* LookupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookupViewController.m; sourceTree = "<group>"; };
+		AA4DDE0521773C1C009F138B /* LookupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LookupViewController.xib; sourceTree = "<group>"; };
+		AA829BA7223B3B7F0007E397 /* TcpPingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TcpPingViewController.h; sourceTree = "<group>"; };
+		AA829BA8223B3B7F0007E397 /* TcpPingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TcpPingViewController.m; sourceTree = "<group>"; };
+		AA829BA9223B3B7F0007E397 /* TcpPingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TcpPingViewController.xib; sourceTree = "<group>"; };
+		AA829BAD223B8E3D0007E397 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		AA829BAE223B8E3D0007E397 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA4DDDA3217708A3009F138B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A393ECA980F74C6A0B1E2CB1 /* libPods-NetPinger.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4DDDBB217708A5009F138B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4DDDC6217708A5009F138B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67B2C37B17F81BDD1C14F343 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94E35020A7135574F06DC3D8 /* libPods-NetPinger.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80207BD3FA7AD0CA6B06529F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA124C93DBDB44038A17FFE4 /* Pods-NetPinger.debug.xcconfig */,
+				59954CC808A8C146B47DA643 /* Pods-NetPinger.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AA4DDD9D217708A3009F138B = {
+			isa = PBXGroup;
+			children = (
+				AA4DDDA8217708A3009F138B /* NetPinger */,
+				AA4DDDC1217708A5009F138B /* NetPingerTests */,
+				AA4DDDCC217708A5009F138B /* NetPingerUITests */,
+				AA4DDDA7217708A3009F138B /* Products */,
+				80207BD3FA7AD0CA6B06529F /* Pods */,
+				67B2C37B17F81BDD1C14F343 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AA4DDDA7217708A3009F138B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DDDA6217708A3009F138B /* NetPinger.app */,
+				AA4DDDBE217708A5009F138B /* NetPingerTests.xctest */,
+				AA4DDDC9217708A5009F138B /* NetPingerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA4DDDA8217708A3009F138B /* NetPinger */ = {
+			isa = PBXGroup;
+			children = (
+				AA829BAC223B8E2C0007E397 /* setting */,
+				AA4DDDFD21773BF9009F138B /* lookup */,
+				AA4DDDFC21773BF2009F138B /* portScan */,
+				AA4DDDF621773ABA009F138B /* tracert */,
+				AA4DDDF021773A9C009F138B /* deviceNetInfo */,
+				AA4DDDEA21773904009F138B /* ping */,
+				AA4DDDE321771B5B009F138B /* mainPage */,
+				AA4DDDA9217708A3009F138B /* AppDelegate.h */,
+				AA4DDDAA217708A3009F138B /* AppDelegate.m */,
+				AA04BD8721782EA200792244 /* NetPingerConst.h */,
+				AA4DDDAF217708A3009F138B /* Main.storyboard */,
+				AA4DDDB2217708A5009F138B /* Assets.xcassets */,
+				AA4DDDB4217708A5009F138B /* LaunchScreen.storyboard */,
+				AA4DDDB7217708A5009F138B /* Info.plist */,
+				AA4DDDB8217708A5009F138B /* main.m */,
+			);
+			path = NetPinger;
+			sourceTree = "<group>";
+		};
+		AA4DDDC1217708A5009F138B /* NetPingerTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DDDC2217708A5009F138B /* NetPingerTests.m */,
+				AA4DDDC4217708A5009F138B /* Info.plist */,
+			);
+			path = NetPingerTests;
+			sourceTree = "<group>";
+		};
+		AA4DDDCC217708A5009F138B /* NetPingerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DDDCD217708A5009F138B /* NetPingerUITests.m */,
+				AA4DDDCF217708A5009F138B /* Info.plist */,
+			);
+			path = NetPingerUITests;
+			sourceTree = "<group>";
+		};
+		AA4DDDE321771B5B009F138B /* mainPage */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DDDE9217731FF009F138B /* controller */,
+				AA4DDDE8217731EC009F138B /* view */,
+				AA4DDDE7217731E1009F138B /* model */,
+			);
+			path = mainPage;
+			sourceTree = "<group>";
+		};
+		AA4DDDE7217731E1009F138B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DDDE4217722BE009F138B /* MainItemInfo.h */,
+				AA4DDDE5217722BE009F138B /* MainItemInfo.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		AA4DDDE8217731EC009F138B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DDDDE21771698009F138B /* MainItemCell.h */,
+				AA4DDDDF21771698009F138B /* MainItemCell.m */,
+				AA4DDDE021771698009F138B /* MainItemCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		AA4DDDE9217731FF009F138B /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DDDDB21770B50009F138B /* MainViewController.h */,
+				AA4DDDDC21770B50009F138B /* MainViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		AA4DDDEA21773904009F138B /* ping */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DDDEB21773918009F138B /* PingViewController.h */,
+				AA4DDDEC21773919009F138B /* PingViewController.m */,
+				AA4DDDED21773919009F138B /* PingViewController.xib */,
+				AA829BA7223B3B7F0007E397 /* TcpPingViewController.h */,
+				AA829BA8223B3B7F0007E397 /* TcpPingViewController.m */,
+				AA829BA9223B3B7F0007E397 /* TcpPingViewController.xib */,
+			);
+			path = ping;
+			sourceTree = "<group>";
+		};
+		AA4DDDF021773A9C009F138B /* deviceNetInfo */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DDDF121773AB4009F138B /* DeviceNetInfoViewController.h */,
+				AA4DDDF221773AB4009F138B /* DeviceNetInfoViewController.m */,
+				AA4DDDF321773AB4009F138B /* DeviceNetInfoViewController.xib */,
+			);
+			path = deviceNetInfo;
+			sourceTree = "<group>";
+		};
+		AA4DDDF621773ABA009F138B /* tracert */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DDDF721773ACE009F138B /* TracertViewController.h */,
+				AA4DDDF821773ACE009F138B /* TracertViewController.m */,
+				AA4DDDF921773ACE009F138B /* TracertViewController.xib */,
+			);
+			path = tracert;
+			sourceTree = "<group>";
+		};
+		AA4DDDFC21773BF2009F138B /* portScan */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DDDFE21773C0D009F138B /* PortScanViewController.h */,
+				AA4DDDFF21773C0D009F138B /* PortScanViewController.m */,
+				AA4DDE0021773C0D009F138B /* PortScanViewController.xib */,
+			);
+			path = portScan;
+			sourceTree = "<group>";
+		};
+		AA4DDDFD21773BF9009F138B /* lookup */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DDE0321773C1C009F138B /* LookupViewController.h */,
+				AA4DDE0421773C1C009F138B /* LookupViewController.m */,
+				AA4DDE0521773C1C009F138B /* LookupViewController.xib */,
+			);
+			path = lookup;
+			sourceTree = "<group>";
+		};
+		AA829BAC223B8E2C0007E397 /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				AA829BAD223B8E3D0007E397 /* SettingViewController.h */,
+				AA829BAE223B8E3D0007E397 /* SettingViewController.m */,
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA4DDDA5217708A3009F138B /* NetPinger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA4DDDD2217708A5009F138B /* Build configuration list for PBXNativeTarget "NetPinger" */;
+			buildPhases = (
+				746C9BAF4203738DD0F71B68 /* [CP] Check Pods Manifest.lock */,
+				AA4DDDA2217708A3009F138B /* Sources */,
+				AA4DDDA3217708A3009F138B /* Frameworks */,
+				AA4DDDA4217708A3009F138B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetPinger;
+			productName = NetPinger;
+			productReference = AA4DDDA6217708A3009F138B /* NetPinger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA4DDDBD217708A5009F138B /* NetPingerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA4DDDD5217708A5009F138B /* Build configuration list for PBXNativeTarget "NetPingerTests" */;
+			buildPhases = (
+				AA4DDDBA217708A5009F138B /* Sources */,
+				AA4DDDBB217708A5009F138B /* Frameworks */,
+				AA4DDDBC217708A5009F138B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA4DDDC0217708A5009F138B /* PBXTargetDependency */,
+			);
+			name = NetPingerTests;
+			productName = NetPingerTests;
+			productReference = AA4DDDBE217708A5009F138B /* NetPingerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AA4DDDC8217708A5009F138B /* NetPingerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA4DDDD8217708A5009F138B /* Build configuration list for PBXNativeTarget "NetPingerUITests" */;
+			buildPhases = (
+				AA4DDDC5217708A5009F138B /* Sources */,
+				AA4DDDC6217708A5009F138B /* Frameworks */,
+				AA4DDDC7217708A5009F138B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA4DDDCB217708A5009F138B /* PBXTargetDependency */,
+			);
+			name = NetPingerUITests;
+			productName = NetPingerUITests;
+			productReference = AA4DDDC9217708A5009F138B /* NetPingerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA4DDD9E217708A3009F138B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = ucloud;
+				TargetAttributes = {
+					AA4DDDA5217708A3009F138B = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					AA4DDDBD217708A5009F138B = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = AA4DDDA5217708A3009F138B;
+					};
+					AA4DDDC8217708A5009F138B = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = AA4DDDA5217708A3009F138B;
+					};
+				};
+			};
+			buildConfigurationList = AA4DDDA1217708A3009F138B /* Build configuration list for PBXProject "NetPinger" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA4DDD9D217708A3009F138B;
+			productRefGroup = AA4DDDA7217708A3009F138B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA4DDDA5217708A3009F138B /* NetPinger */,
+				AA4DDDBD217708A5009F138B /* NetPingerTests */,
+				AA4DDDC8217708A5009F138B /* NetPingerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA4DDDA4217708A3009F138B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA4DDDFB21773ACE009F138B /* TracertViewController.xib in Resources */,
+				AA4DDDB6217708A5009F138B /* LaunchScreen.storyboard in Resources */,
+				AA4DDDE221771698009F138B /* MainItemCell.xib in Resources */,
+				AA4DDDF521773AB4009F138B /* DeviceNetInfoViewController.xib in Resources */,
+				AA4DDE0221773C0D009F138B /* PortScanViewController.xib in Resources */,
+				AA4DDDB3217708A5009F138B /* Assets.xcassets in Resources */,
+				AA4DDE0721773C1C009F138B /* LookupViewController.xib in Resources */,
+				AA4DDDB1217708A3009F138B /* Main.storyboard in Resources */,
+				AA829BAB223B3B7F0007E397 /* TcpPingViewController.xib in Resources */,
+				AA4DDDEF21773919009F138B /* PingViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4DDDBC217708A5009F138B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4DDDC7217708A5009F138B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		746C9BAF4203738DD0F71B68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetPinger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA4DDDA2217708A3009F138B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA829BAA223B3B7F0007E397 /* TcpPingViewController.m in Sources */,
+				AA4DDE0621773C1C009F138B /* LookupViewController.m in Sources */,
+				AA4DDDF421773AB4009F138B /* DeviceNetInfoViewController.m in Sources */,
+				AA4DDDB9217708A5009F138B /* main.m in Sources */,
+				AA4DDE0121773C0D009F138B /* PortScanViewController.m in Sources */,
+				AA4DDDE6217722BE009F138B /* MainItemInfo.m in Sources */,
+				AA4DDDE121771698009F138B /* MainItemCell.m in Sources */,
+				AA4DDDAB217708A3009F138B /* AppDelegate.m in Sources */,
+				AA4DDDEE21773919009F138B /* PingViewController.m in Sources */,
+				AA4DDDFA21773ACE009F138B /* TracertViewController.m in Sources */,
+				AA4DDDDD21770B50009F138B /* MainViewController.m in Sources */,
+				AA829BAF223B8E3D0007E397 /* SettingViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4DDDBA217708A5009F138B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA4DDDC3217708A5009F138B /* NetPingerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4DDDC5217708A5009F138B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA4DDDCE217708A5009F138B /* NetPingerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA4DDDC0217708A5009F138B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA4DDDA5217708A3009F138B /* NetPinger */;
+			targetProxy = AA4DDDBF217708A5009F138B /* PBXContainerItemProxy */;
+		};
+		AA4DDDCB217708A5009F138B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA4DDDA5217708A3009F138B /* NetPinger */;
+			targetProxy = AA4DDDCA217708A5009F138B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AA4DDDAF217708A3009F138B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA4DDDB0217708A3009F138B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AA4DDDB4217708A5009F138B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA4DDDB5217708A5009F138B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA4DDDD0217708A5009F138B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AA4DDDD1217708A5009F138B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA4DDDD3217708A5009F138B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA124C93DBDB44038A17FFE4 /* Pods-NetPinger.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TGX8D2MGGK;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NetPinger",
+				);
+				INFOPLIST_FILE = NetPinger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.mediaios.NetPinger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA4DDDD4217708A5009F138B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59954CC808A8C146B47DA643 /* Pods-NetPinger.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TGX8D2MGGK;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NetPinger",
+				);
+				INFOPLIST_FILE = NetPinger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.mediaios.NetPinger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA4DDDD6217708A5009F138B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CFP9KY4MGC;
+				INFOPLIST_FILE = NetPingerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ucloud.NetPingerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetPinger.app/NetPinger";
+			};
+			name = Debug;
+		};
+		AA4DDDD7217708A5009F138B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CFP9KY4MGC;
+				INFOPLIST_FILE = NetPingerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ucloud.NetPingerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetPinger.app/NetPinger";
+			};
+			name = Release;
+		};
+		AA4DDDD9217708A5009F138B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CFP9KY4MGC;
+				INFOPLIST_FILE = NetPingerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ucloud.NetPingerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NetPinger;
+			};
+			name = Debug;
+		};
+		AA4DDDDA217708A5009F138B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CFP9KY4MGC;
+				INFOPLIST_FILE = NetPingerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.ucloud.NetPingerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NetPinger;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA4DDDA1217708A3009F138B /* Build configuration list for PBXProject "NetPinger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA4DDDD0217708A5009F138B /* Debug */,
+				AA4DDDD1217708A5009F138B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA4DDDD2217708A5009F138B /* Build configuration list for PBXNativeTarget "NetPinger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA4DDDD3217708A5009F138B /* Debug */,
+				AA4DDDD4217708A5009F138B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA4DDDD5217708A5009F138B /* Build configuration list for PBXNativeTarget "NetPingerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA4DDDD6217708A5009F138B /* Debug */,
+				AA4DDDD7217708A5009F138B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA4DDDD8217708A5009F138B /* Build configuration list for PBXNativeTarget "NetPingerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA4DDDD9217708A5009F138B /* Debug */,
+				AA4DDDDA217708A5009F138B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA4DDD9E217708A3009F138B /* Project object */;
+}

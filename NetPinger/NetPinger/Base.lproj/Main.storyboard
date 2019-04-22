@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eCd-hh-vpL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="qAx-GK-nBr">
+            <objects>
+                <navigationController id="eCd-hh-vpL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MjG-mW-CAD">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cwc-eQ-APB" kind="relationship" relationship="rootViewController" id="2V9-xC-oEN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pOn-Kj-dP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="230" y="-184"/>
+        </scene>
+        <!--NetPinger-->
+        <scene sceneID="XIR-A5-mxI">
+            <objects>
+                <collectionViewController id="cwc-eQ-APB" customClass="MainViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="tzJ-h8-NSV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Lum-Hc-xpD">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0g2-5y-Ik9" customClass="MainItemCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="cwc-eQ-APB" id="7GE-Og-etv"/>
+                            <outlet property="delegate" destination="cwc-eQ-APB" id="I4u-L2-ry3"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="NetPinger" id="ZyV-8R-IMB">
+                        <barButtonItem key="rightBarButtonItem" title="Setting" id="9qd-ep-5vf">
+                            <color key="tintColor" red="0.082352941176470587" green="0.14901960784313725" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="8ps-be-zSp" kind="push" id="het-4M-nYl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ln5-EA-KrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="-185"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="e9J-dd-Y4L">
+            <objects>
+                <viewController id="8ps-be-zSp" customClass="SettingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lEP-Gu-6fG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aQo-iz-cNK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8ps-be-zSp" id="udp-cZ-N0Z"/>
+                                    <outlet property="delegate" destination="8ps-be-zSp" id="00t-Bf-SCH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aQo-iz-cNK" firstAttribute="leading" secondItem="8bm-9C-DWJ" secondAttribute="leading" id="3EX-1v-5Tw"/>
+                            <constraint firstItem="8bm-9C-DWJ" firstAttribute="bottom" secondItem="aQo-iz-cNK" secondAttribute="bottom" id="EGf-tv-D91"/>
+                            <constraint firstItem="8bm-9C-DWJ" firstAttribute="trailing" secondItem="aQo-iz-cNK" secondAttribute="trailing" id="VjN-lr-gGV"/>
+                            <constraint firstItem="aQo-iz-cNK" firstAttribute="top" secondItem="8bm-9C-DWJ" secondAttribute="top" id="wIP-kG-H6o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8bm-9C-DWJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Setting" id="bqs-Xi-MB6"/>
+                    <connections>
+                        <outlet property="tableView" destination="aQo-iz-cNK" id="hOe-ef-21c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nlg-Rg-0Qa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="-188"/>
+        </scene>
+    </scenes>
+</document>
