@@ -2,7 +2,7 @@
 //  PNTcpPing.m
 //  PhoneNetSDK
 //
-//  Created by ethan on 2019/3/11.
+//  Created by mediaios on 2019/3/11.
 //  Copyright © 2019 mediaios. All rights reserved.
 //
 
@@ -55,15 +55,26 @@
 @end
 
 
+static PNTcpPing *g_tcpPing = nil;
+void tcp_conn_handler()
+{
+    if (g_tcpPing) {
+        [g_tcpPing processLongConn];
+    }
+}
+
+
 @interface PNTcpPing()
 {
     struct sockaddr_in addr;
+    int sock;
 }
 @property (nonatomic,readonly) NSString  *host;
 @property (nonatomic,readonly) NSUInteger port;
 @property (nonatomic,readonly) NSUInteger count;
 @property (copy,readonly) PNTcpPingHandler complete;
 @property (atomic) BOOL isStop;
+@property (nonatomic,assign) BOOL isSucc;
 
 @property (nonatomic,copy) NSMutableString *pingDetails;
 @end
@@ -81,6 +92,7 @@
         _count = count;
         _complete = complete;
         _isStop = NO;
+        _isSucc = YES;
     }
     return self;
 }
@@ -97,6 +109,7 @@
              complete:(PNTcpPingHandler _Nonnull)complete
 {
     PNTcpPing *tcpPing = [[PNTcpPing alloc] init:host port:port count:count complete:complete];
+    g_tcpPing = tcpPing;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [tcpPing sendAndRec];
     });
@@ -150,15 +163,26 @@
     }
     
     dispatch_async(dispatch_get_main_queue(), ^(void) {
-        PNTcpPingResult *pingRes  = [self constPingRes:code ip:ip durations:intervals loss:loss count:index];
-        [self.pingDetails appendString:pingRes.description];
+        
+        if (self.isSucc) {
+            PNTcpPingResult *pingRes  = [self constPingRes:code ip:ip durations:intervals loss:loss count:index];
+            [self.pingDetails appendString:pingRes.description];
+        }
         self.complete(self.pingDetails);
         free(intervals);
     });
 }
 
+
+- (void)processLongConn
+{
+    close(sock);
+    _isStop = YES;
+    _isSucc = NO;
+}
+
 - (int)connect:(struct sockaddr_in *)addr{
-    int sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (sock == -1) {
         return errno;
     }
@@ -172,7 +196,13 @@
     setsockopt(sock, SOL_SOCKET, SO_RCVTIMEO, (char *)&timeout, sizeof(timeout));
     setsockopt(sock, SOL_SOCKET, SO_SNDTIMEO, (char *)&timeout, sizeof(timeout));
     
-    if (connect(sock, (struct sockaddr *)addr, sizeof(struct sockaddr)) < 0) {
+    sigset(SIGALRM, tcp_conn_handler);
+    alarm(1);
+    int conn_res = connect(sock, (struct sockaddr *)addr, sizeof(struct sockaddr));
+    alarm(0);
+    sigrelse(SIGALRM);
+    
+    if (conn_res < 0) {
         int err = errno;
         close(sock);
         return err;

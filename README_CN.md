@@ -16,6 +16,12 @@
 <img src="https://ws1.sinaimg.cn/large/006tNc79gy1g25f78yxwvj30d50sp41b.jpg" height="500px" alt="图片说明" ><img src="https://ws3.sinaimg.cn/large/006tNc79gy1g25f4z3p2qj30da0ss0uc.jpg" height="500px" alt="图片说明" > <img src="https://ws3.sinaimg.cn/large/006tNc79gy1g25f5ezjpuj30da0svmyb.jpg" height="500px" alt="图片说明" >   
 </div>
 
+<div align="center">
+<img src="https://raw.githubusercontent.com/mediaios/net-diagnosis/master/imgs/lanscan.png" height="500px" alt="图片说明" ><img src="https://raw.githubusercontent.com/mediaios/net-diagnosis/master/imgs/mainpage.PNG" height="500px" alt="图片说明" ><img src="https://raw.githubusercontent.com/mediaios/net-diagnosis/master/imgs/netinfo.PNG" height="500px" alt="图片说明" >   
+</div>
+
+* [NetPinger源码](https://github.com/mediaios/net-diagnosis/tree/master/NetPinger)
+* 欢迎 star & fork 
 
 ## 环境要求
 
@@ -99,13 +105,60 @@ _tcpPing = [PNTcpPing start:hostDomain port:portNum.integerValue count:3 complet
 }];
 ```
 
+### 局域网ip扫描 
+
+如果你要做局域网活跃ip扫描功能的话，那么利用该SDK你可以很快的监听到每个活跃的ip，并且SDK还会返回给你扫描进度。
+
+具体步骤如下： 
+
+1. 创建对象并设置代理`PNetMLanScannerDelegate`
+2. 启动扫描,并通过其代理方法处理活跃的ip
+3. 监听扫描进度(可选)
+
+```
+ PNetMLanScanner *lanScanner = [PNetMLanScanner shareInstance];
+ lanScanner.delegate =  self;
+ [lanScanner scan];
+```
+
 ### 其它功能
 
 * 设置SDK的日志级别
 * 获取设备的公网ip信息
 * 随着版本的迭代，会提供更多高级功能
 
+
+## NetPinger-Example 
+
+ios平台网络诊断APP(使用的是该SDK)，支持对ip和域名的ping,traceroute(udp,icmp协议)，支持tcp ping, 端口扫描，nslookup等功能。
+
+直接进入到`Podfile`文件所在目录安装该SDK即可成功运行。
+
+```
+macdeiMac:NetPinger ethan$ pod install 
+Analyzing dependencies
+Downloading dependencies
+Installing PhoneNetSDK (1.0.7)
+Generating Pods project
+Integrating client project
+
+[!] Please close any current Xcode sessions and use `NetPinger.xcworkspace` for this project from now on.
+Sending stats
+Pod installation complete! There is 1 dependency from the Podfile and 1 total pod installed.
+```
+
+
+### 项目由来
+
+在开发中，经常会遇到接口出问题(DNS解析出错等)所以需要检测手机终端到服务端的网络是不是通,所以就需要在手机中断`ping`一下，但是市场上的免费的网络检测工具大都有弹出广告影响体验(eg:iNetTools)，所以有必要自己开发一款网络剧检测app。 
+
+### 实现
+
+所有的功能都是利用该SDK提供的功能实现的，页面和图标主要是模仿MAC上的`NetWork Utility`,希望对你的应用提供有价值的参考。 
+
+
 ## 联系我们
 
 * 如果你有任何问题或需求，请提交[issue](https://github.com/mediaios/net-diagnosis/issues)
 * 如果你要提交代码，欢迎提交 pull request
+* 欢迎 `star` & `fork`

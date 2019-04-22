@@ -2,8 +2,8 @@
 //  PNetTools.m
 //  PhoneNetSDK
 //
-//  Created by ethan on 2019/2/28.
-//  Copyright © 2019 ucloud. All rights reserved.
+//  Created by mediaios on 2019/2/28.
+//  Copyright © 2019 mediaios. All rights reserved.
 //
 
 #import "PNetTools.h"
@@ -18,5 +18,12 @@
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     result = [pred evaluateWithObject:domain];
     return result;
+}
+
+
++ (NSInteger)currentTimestamp
+{
+    NSTimeInterval currentTime = [[NSDate date] timeIntervalSince1970];
+    return (NSInteger)currentTime;
 }
 @end

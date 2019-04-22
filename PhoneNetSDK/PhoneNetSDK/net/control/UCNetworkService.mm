@@ -2,7 +2,7 @@
 //  UCNetworkService.m
 //  UCNetDiagnosisDemo
 //
-//  Created by ethan on 13/08/2018.
+//  Created by mediaios on 13/08/2018.
 //  Copyright © 2018 mediaios. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  UNetAnalysisConst.h
 //  UNetAnalysisSDK
 //
-//  Created by ethan on 26/07/2018.
+//  Created by mediaios on 26/07/2018.
 //  Copyright © 2018 mediaios. All rights reserved.
 //
 
@@ -21,7 +21,7 @@
 
 /***********      Global define       ***********/
 #define      PhoneNotification       [NSNotificationCenter defaultCenter]
-#define      PhoneNetSDKVersion      @"1.0.4"
+#define      PhoneNetSDKVersion      @"1.0.12"
 
 /***********      Ping model       ***********/
 #define   KPingIcmpIdBeginNum     8000

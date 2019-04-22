@@ -17,6 +17,13 @@ Take a screenshot of the network diagnostic app developed with this sdk:
 <img src="https://ws1.sinaimg.cn/large/006tNc79gy1g25f78yxwvj30d50sp41b.jpg" height="500px" alt="图片说明" ><img src="https://ws3.sinaimg.cn/large/006tNc79gy1g25f4z3p2qj30da0ss0uc.jpg" height="500px" alt="图片说明" > <img src="https://ws3.sinaimg.cn/large/006tNc79gy1g25f5ezjpuj30da0svmyb.jpg" height="500px" alt="图片说明" >   
 </div>
 
+<div align="center">
+<img src="https://raw.githubusercontent.com/mediaios/net-diagnosis/master/imgs/lanscan.png" height="500px" alt="图片说明" ><img src="https://raw.githubusercontent.com/mediaios/net-diagnosis/master/imgs/mainpage.PNG" height="500px" alt="图片说明" ><img src="https://raw.githubusercontent.com/mediaios/net-diagnosis/master/imgs/netinfo.PNG" height="500px" alt="图片说明" >   
+</div>
+
+* [NetPinger source code](https://github.com/mediaios/net-diagnosis/tree/master/NetPinger)
+* Welcome star & fork 
+
 ## Environment
 
 * iOS >= 9.0
@@ -97,14 +104,60 @@ In the terminal of mac, enter `traceroute -I baidu.com` to use the ICMP protocol
 }];
 ```
 
+### LAN Scanning 
+
+If you want to do the LAN active ip scanning function, then you can quickly monitor every active ip with the SDK, and the SDK will return to you the scanning progress.
+
+Specific steps are as follows: 
+
+1. Create an object and set the proxy `PNetMLanScannerDelegate`
+2. Start the scan and process the active ip through its delegate method
+3. Monitor scan progress (optional)
+
+```
+ PNetMLanScanner *lanScanner = [PNetMLanScanner shareInstance];
+ lanScanner.delegate =  self;
+ [lanScanner scan];
+```
+
+
 ### Ohter functions
 
 * Setting SDK log level
 * Get device public ip info 
+
+## NetPinger-Example
+
+Ios platform network diagnostic APP (using the SDK), support ping and domain name ping, traceroute (udp, icmp protocol), support tcp ping, port scan, nslookup and other functions.
+
+Simply go to the directory where the `Podfile` file is located and install the SDK to run successfully.
+
+
+```
+macdeiMac:NetPinger ethan$ pod install 
+Analyzing dependencies
+Downloading dependencies
+Installing PhoneNetSDK (1.0.7)
+Generating Pods project
+Integrating client project
+
+[!] Please close any current Xcode sessions and use `NetPinger.xcworkspace` for this project from now on.
+Sending stats
+Pod installation complete! There is 1 dependency from the Podfile and 1 total pod installed.
+```
+
+### Project origin
+
+In development, you often encounter problems with the interface (DNS resolution error, etc.), so you need to detect whether the mobile terminal to the server's network is not connected, so you need to interrupt `ping` on the mobile phone, but the free network detection tool on the market. Most have pop-up ads affecting the experience (eg: iNetTools), so it is necessary to develop a web drama detection app.
+
+### Implementation
+
+All functions are implemented using the functions provided by the SDK. The pages and icons are mainly imitating the `NetWork Utility` on the MAC, and hope to provide a valuable reference for your application.
 
 
 ## Contact us 
 
 * If you have any questions or need any feature, please submit [issue](https://github.com/mediaios/net-diagnosis/issues)
 * If you want to contribute, please submit pull request
+* Welcome `star` & `fork`
 

@@ -2,7 +2,7 @@
 //  PNTcpPing.h
 //  PhoneNetSDK
 //
-//  Created by ethan on 2019/3/11.
+//  Created by mediaios on 2019/3/11.
 //  Copyright © 2019 mediaios. All rights reserved.
 //
 
@@ -63,6 +63,12 @@ typedef void (^PNTcpPingHandler)(NSMutableString *);
  @brief stop tcp ping
  */
 - (void)stopTcpPing;
+
+
+/**
+ @brief processing long tcp conn(ip or port can not be connected)
+ */
+- (void)processLongConn;
 
 
 @end

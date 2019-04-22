@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D874B8122A7FC3D00DA8AA8 /* PhonePing.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3D874B8022A7FC3D00DA8AA8 /* PhonePing.mm */; };
+		3D874B8422A8033900DA8AA8 /* PNSamplePing.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D874B8222A8033900DA8AA8 /* PNSamplePing.h */; };
+		3D874B8522A8033900DA8AA8 /* PNSamplePing.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3D874B8322A8033900DA8AA8 /* PNSamplePing.mm */; };
 		AA2B9DA02236649400928AF1 /* PNTcpPing.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2B9D9E2236649400928AF1 /* PNTcpPing.m */; };
 		AA2B9DA12236649400928AF1 /* PNTcpPing.h in Headers */ = {isa = PBXBuildFile; fileRef = AA2B9D9F2236649400928AF1 /* PNTcpPing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA466F7E221FA113009CD053 /* PhoneNetSDKConst.h in Headers */ = {isa = PBXBuildFile; fileRef = AA466F7D221FA113009CD053 /* PhoneNetSDKConst.h */; };
 		AA466F82221FBCD1009CD053 /* PhoneNetDiagnosisHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA466F80221FBCD1009CD053 /* PhoneNetDiagnosisHelper.h */; };
 		AA466F83221FBCD1009CD053 /* PhoneNetDiagnosisHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA466F81221FBCD1009CD053 /* PhoneNetDiagnosisHelper.m */; };
 		AA466F8F221FBCDA009CD053 /* PhonePing.h in Headers */ = {isa = PBXBuildFile; fileRef = AA466F86221FBCDA009CD053 /* PhonePing.h */; };
-		AA466F90221FBCDA009CD053 /* PhonePing.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA466F87221FBCDA009CD053 /* PhonePing.mm */; };
 		AA466F91221FBCDA009CD053 /* PhonePingService.h in Headers */ = {isa = PBXBuildFile; fileRef = AA466F88221FBCDA009CD053 /* PhonePingService.h */; };
 		AA466F92221FBCDA009CD053 /* PhonePingService.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA466F89221FBCDA009CD053 /* PhonePingService.mm */; };
 		AA466F93221FBCDA009CD053 /* PPingResModel.h in Headers */ = {isa = PBXBuildFile; fileRef = AA466F8B221FBCDA009CD053 /* PPingResModel.h */; };
@@ -32,6 +34,10 @@
 		AA829BA6223908270007E397 /* PNUdpTraceroute.m in Sources */ = {isa = PBXBuildFile; fileRef = AA829BA4223908270007E397 /* PNUdpTraceroute.m */; };
 		AA99ACC622266F6D0099A2E3 /* PNetLog.h in Headers */ = {isa = PBXBuildFile; fileRef = AA99ACC422266F6D0099A2E3 /* PNetLog.h */; };
 		AA99ACC722266F6D0099A2E3 /* PNetLog.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA99ACC522266F6D0099A2E3 /* PNetLog.mm */; };
+		AAA1BDE322A7B36D00C0D7F5 /* PNetMLanScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA1BDE122A7B36D00C0D7F5 /* PNetMLanScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAA1BDE422A7B36D00C0D7F5 /* PNetMLanScanner.mm in Sources */ = {isa = PBXBuildFile; fileRef = AAA1BDE222A7B36D00C0D7F5 /* PNetMLanScanner.mm */; };
+		AAA1BE2B22A7C95200C0D7F5 /* PNetworkCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA1BE2922A7C95100C0D7F5 /* PNetworkCalculator.m */; };
+		AAA1BE2C22A7C95200C0D7F5 /* PNetworkCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA1BE2A22A7C95100C0D7F5 /* PNetworkCalculator.h */; };
 		AAA4AC462227AE9E00C8AC65 /* PNDomainLookup.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA4AC442227AE9E00C8AC65 /* PNDomainLookup.h */; };
 		AAA4AC472227AE9E00C8AC65 /* PNDomainLookup.mm in Sources */ = {isa = PBXBuildFile; fileRef = AAA4AC452227AE9E00C8AC65 /* PNDomainLookup.mm */; };
 		AAA4AC4A2227D18800C8AC65 /* PNetTools.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA4AC482227D18800C8AC65 /* PNetTools.h */; };
@@ -67,13 +73,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D874B8022A7FC3D00DA8AA8 /* PhonePing.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhonePing.mm; sourceTree = "<group>"; };
+		3D874B8222A8033900DA8AA8 /* PNSamplePing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNSamplePing.h; sourceTree = "<group>"; };
+		3D874B8322A8033900DA8AA8 /* PNSamplePing.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PNSamplePing.mm; sourceTree = "<group>"; };
 		AA2B9D9E2236649400928AF1 /* PNTcpPing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNTcpPing.m; sourceTree = "<group>"; };
 		AA2B9D9F2236649400928AF1 /* PNTcpPing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNTcpPing.h; sourceTree = "<group>"; };
 		AA466F7D221FA113009CD053 /* PhoneNetSDKConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNetSDKConst.h; sourceTree = "<group>"; };
 		AA466F80221FBCD1009CD053 /* PhoneNetDiagnosisHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNetDiagnosisHelper.h; sourceTree = "<group>"; };
 		AA466F81221FBCD1009CD053 /* PhoneNetDiagnosisHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNetDiagnosisHelper.m; sourceTree = "<group>"; };
 		AA466F86221FBCDA009CD053 /* PhonePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhonePing.h; sourceTree = "<group>"; };
-		AA466F87221FBCDA009CD053 /* PhonePing.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhonePing.mm; sourceTree = "<group>"; };
 		AA466F88221FBCDA009CD053 /* PhonePingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhonePingService.h; sourceTree = "<group>"; };
 		AA466F89221FBCDA009CD053 /* PhonePingService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhonePingService.mm; sourceTree = "<group>"; };
 		AA466F8B221FBCDA009CD053 /* PPingResModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPingResModel.h; sourceTree = "<group>"; };
@@ -92,6 +100,10 @@
 		AA829BA4223908270007E397 /* PNUdpTraceroute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNUdpTraceroute.m; sourceTree = "<group>"; };
 		AA99ACC422266F6D0099A2E3 /* PNetLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNetLog.h; sourceTree = "<group>"; };
 		AA99ACC522266F6D0099A2E3 /* PNetLog.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PNetLog.mm; sourceTree = "<group>"; };
+		AAA1BDE122A7B36D00C0D7F5 /* PNetMLanScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNetMLanScanner.h; sourceTree = "<group>"; };
+		AAA1BDE222A7B36D00C0D7F5 /* PNetMLanScanner.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PNetMLanScanner.mm; sourceTree = "<group>"; };
+		AAA1BE2922A7C95100C0D7F5 /* PNetworkCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNetworkCalculator.m; sourceTree = "<group>"; };
+		AAA1BE2A22A7C95100C0D7F5 /* PNetworkCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNetworkCalculator.h; sourceTree = "<group>"; };
 		AAA4AC442227AE9E00C8AC65 /* PNDomainLookup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNDomainLookup.h; sourceTree = "<group>"; };
 		AAA4AC452227AE9E00C8AC65 /* PNDomainLookup.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PNDomainLookup.mm; sourceTree = "<group>"; };
 		AAA4AC482227D18800C8AC65 /* PNetTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNetTools.h; sourceTree = "<group>"; };
@@ -180,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				AA466F86221FBCDA009CD053 /* PhonePing.h */,
-				AA466F87221FBCDA009CD053 /* PhonePing.mm */,
+				3D874B8022A7FC3D00DA8AA8 /* PhonePing.mm */,
 				AA466F88221FBCDA009CD053 /* PhonePingService.h */,
 				AA466F89221FBCDA009CD053 /* PhonePingService.mm */,
 			);
@@ -248,6 +260,17 @@
 			path = udptracert;
 			sourceTree = "<group>";
 		};
+		AAA1BDDC22A7A6AD00C0D7F5 /* lanscan */ = {
+			isa = PBXGroup;
+			children = (
+				AAA1BDE122A7B36D00C0D7F5 /* PNetMLanScanner.h */,
+				AAA1BDE222A7B36D00C0D7F5 /* PNetMLanScanner.mm */,
+				3D874B8222A8033900DA8AA8 /* PNSamplePing.h */,
+				3D874B8322A8033900DA8AA8 /* PNSamplePing.mm */,
+			);
+			path = lanscan;
+			sourceTree = "<group>";
+		};
 		AAA4AC432227AE3C00C8AC65 /* lookup */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +309,8 @@
 		AAA828772216868900440AEE /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				AAA1BE2A22A7C95100C0D7F5 /* PNetworkCalculator.h */,
+				AAA1BE2922A7C95100C0D7F5 /* PNetworkCalculator.m */,
 				AAA828822216C6AE00440AEE /* log4cplus_pn.h */,
 				AAA82879221686AE00440AEE /* PNetQueue.h */,
 				AAA82878221686AE00440AEE /* PNetQueue.m */,
@@ -322,6 +347,7 @@
 				AAFC6781217436B300044085 /* public */,
 				AA466F7F221FBCD1009CD053 /* common */,
 				AA466F84221FBCDA009CD053 /* uping */,
+				AAA1BDDC22A7A6AD00C0D7F5 /* lanscan */,
 				AA2B9D9D2236646200928AF1 /* tcpping */,
 				AA4DDD762174A188009F138B /* utracert */,
 				AA829BA2223907E40007E397 /* udptracert */,
@@ -378,12 +404,15 @@
 				AAE53C77222675B500DB23A7 /* PhoneNetSDKHelper.h in Headers */,
 				AA466F7E221FA113009CD053 /* PhoneNetSDKConst.h in Headers */,
 				AAA8287B221686AE00440AEE /* PNetQueue.h in Headers */,
+				AAA1BDE322A7B36D00C0D7F5 /* PNetMLanScanner.h in Headers */,
 				AA829BA5223908270007E397 /* PNUdpTraceroute.h in Headers */,
 				AAA8287E22168CD000440AEE /* PNetModel.h in Headers */,
+				AAA1BE2C22A7C95200C0D7F5 /* PNetworkCalculator.h in Headers */,
 				AA466F82221FBCD1009CD053 /* PhoneNetDiagnosisHelper.h in Headers */,
 				AAA82875221670AD00440AEE /* PNetReachability.h in Headers */,
 				AAA8287122166AAB00440AEE /* UCNetworkService.h in Headers */,
 				AAA4AC4A2227D18800C8AC65 /* PNetTools.h in Headers */,
+				3D874B8422A8033900DA8AA8 /* PNSamplePing.h in Headers */,
 				AAFC6784217436E200044085 /* PhoneNetManager.h in Headers */,
 				AA4DDD852174A188009F138B /* PhoneTraceRoute.h in Headers */,
 				AAA4AC462227AE9E00C8AC65 /* PNDomainLookup.h in Headers */,
@@ -503,14 +532,17 @@
 				AA4DDD982175F220009F138B /* PNetInfoTool.m in Sources */,
 				AAA4AC4B2227D18800C8AC65 /* PNetTools.m in Sources */,
 				AA4DDD8A2174A188009F138B /* PTracerRouteResModel.m in Sources */,
+				3D874B8522A8033900DA8AA8 /* PNSamplePing.mm in Sources */,
 				AAA4AC472227AE9E00C8AC65 /* PNDomainLookup.mm in Sources */,
-				AA466F90221FBCDA009CD053 /* PhonePing.mm in Sources */,
+				AAA1BDE422A7B36D00C0D7F5 /* PNetMLanScanner.mm in Sources */,
 				AA466F92221FBCDA009CD053 /* PhonePingService.mm in Sources */,
+				3D874B8122A7FC3D00DA8AA8 /* PhonePing.mm in Sources */,
 				AAFC6785217436E200044085 /* PhoneNetManager.mm in Sources */,
 				AA466F83221FBCD1009CD053 /* PhoneNetDiagnosisHelper.m in Sources */,
 				AA4DDD862174A188009F138B /* PhoneTraceRoute.mm in Sources */,
 				AA466F96221FBCDA009CD053 /* PReportPingModel.m in Sources */,
 				AAA8287F22168CD000440AEE /* PNetModel.m in Sources */,
+				AAA1BE2B22A7C95200C0D7F5 /* PNetworkCalculator.m in Sources */,
 				AAA4AC502227E05C00C8AC65 /* PNPortScan.mm in Sources */,
 				AAA8287A221686AE00440AEE /* PNetQueue.m in Sources */,
 				AA466F94221FBCDA009CD053 /* PPingResModel.m in Sources */,
@@ -659,6 +691,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
 				DEAD_CODE_STRIPPING = NO;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = CFP9KY4MGC;
@@ -692,6 +725,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
 				DEAD_CODE_STRIPPING = NO;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = CFP9KY4MGC;
