@@ -2,7 +2,7 @@
 //  PNetModel.m
 //  PhoneNetSDK
 //
-//  Created by ethan on 2019/2/15.
+//  Created by mediaios on 2019/2/15.
 //  Copyright © 2019 mediaios. All rights reserved.
 //
 

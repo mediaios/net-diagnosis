@@ -2,7 +2,7 @@
 //  UPingResModel.h
 //  PingDemo
 //
-//  Created by ethan on 31/07/2018.
+//  Created by mediaios on 31/07/2018.
 //  Copyright © 2018 mediaios. All rights reserved.
 //
 

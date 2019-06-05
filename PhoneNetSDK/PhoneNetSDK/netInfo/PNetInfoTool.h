@@ -2,7 +2,7 @@
 //  PNetInfoTool.h
 //  PhoneNetSDK
 //
-//  Created by ethan on 2018/10/16.
+//  Created by mediaios on 2018/10/16.
 //  Copyright © 2018 mediaios. All rights reserved.
 //
 

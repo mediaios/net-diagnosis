@@ -73,7 +73,7 @@
 		AA466F80221FBCD1009CD053 /* PhoneNetDiagnosisHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNetDiagnosisHelper.h; sourceTree = "<group>"; };
 		AA466F81221FBCD1009CD053 /* PhoneNetDiagnosisHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNetDiagnosisHelper.m; sourceTree = "<group>"; };
 		AA466F86221FBCDA009CD053 /* PhonePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhonePing.h; sourceTree = "<group>"; };
-		AA466F87221FBCDA009CD053 /* PhonePing.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhonePing.mm; sourceTree = "<group>"; };
+		AA466F87221FBCDA009CD053 /* PhonePing.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PhonePing.mm; path = /Users/ethan/Desktop/workZone/myproduct/PhoneNetSDK/PhoneNetSDK/PhoneNetSDK/uping/control/PhonePing.mm; sourceTree = "<absolute>"; };
 		AA466F88221FBCDA009CD053 /* PhonePingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhonePingService.h; sourceTree = "<group>"; };
 		AA466F89221FBCDA009CD053 /* PhonePingService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhonePingService.mm; sourceTree = "<group>"; };
 		AA466F8B221FBCDA009CD053 /* PPingResModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPingResModel.h; sourceTree = "<group>"; };
