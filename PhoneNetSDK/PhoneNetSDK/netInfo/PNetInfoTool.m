@@ -167,13 +167,13 @@ static PNetInfoTool *pNetInfoTool_instance = NULL;
                         type = IP_ADDR_IPv4;
                     }
                     
-//                    if([[NSString stringWithUTF8String:interface->ifa_name] isEqualToString:@"en0"]) {
+                    if([[NSString stringWithUTF8String:interface->ifa_name] isEqualToString:@"en0"]) {
                         NSString *netmask = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)interface->ifa_netmask)->sin_addr)];
                         if (netmask) {
                             [addresses setObject:netmask forKey:@"netmask"];
                         }
-//                    }
-                    
+                    }
+                
                 } else {
                     const struct sockaddr_in6 *addr6 = (const struct sockaddr_in6*)interface->ifa_addr;
                     if(inet_ntop(AF_INET6, &addr6->sin6_addr, addrBuf, INET6_ADDRSTRLEN)) {

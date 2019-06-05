@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (BOOL)validDomain:(NSString *)domain;
 
++ (NSInteger)currentTimestamp;
 @end
 
 NS_ASSUME_NONNULL_END
