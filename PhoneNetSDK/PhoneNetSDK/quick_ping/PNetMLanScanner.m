@@ -7,7 +7,6 @@
 //
 
 #import "PNetMLanScanner.h"
-//#import "PNQuickPingService.h"
 #import "PReportPingModel.h"
 #import "PNetInfoTool.h"
 #import "PNetModel.h"
@@ -60,16 +59,8 @@
             }
             NSLog(@"qizhang---debug--netmask:%@----ip :%@",netMask,ip);
             NSLog(@"qizhang---debug---iplist: %@",_arrayList);
-            [self.samplePing startPingHosts:self.arrayList[_index] packetCount:3];
+            [self.samplePing startPingIp:self.arrayList[_index] packetCount:3];
             _index++;
-//            [PNQuickPingService shareInstance].delegate = self;
-//            NSString *array1 = [arrayList objectAtIndex:0];
-//            arrayList = @[@"192.168.187.1"];
-//            [[PNQuickPingService shareInstance] startPingAddressList:@[_arrayList[_index]]];
-//            _index++;
-            // 192.168.187.1
-            
-            
         }
         
     }
@@ -100,23 +91,9 @@
     _samplePing = [[PNSamplePing alloc] init];
     _samplePing.delegate = self;
     if (self.index < self.arrayList.count) {
-        [_samplePing startPingHosts:self.arrayList[self.index] packetCount:2];
+        [_samplePing startPingIp:self.arrayList[self.index] packetCount:2];
     }
     _index++;
 }
-
-
-//#pragma mark - PNQuickPingServiceDelegate
-//- (void)pingFinishedWithQuickPingService:(PNQuickPingService *)ucPing
-//{
-//    [[PNQuickPingService shareInstance] startPingAddressList:@[_arrayList[_index]]];
-//    _index++;
-//    NSLog(@"%@",ucPing);
-//}
-//
-//- (void)oneIpPingItemWithQuickPingService:(PNQuickPingService *)ucPing pingResult:(PReportPingModel *)pingRes
-//{
-//    NSLog(@"%@",pingRes);
-//}
 
 @end

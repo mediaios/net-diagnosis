@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,weak) id<PNSamplePingDelegate> delegate;
 
-- (void)startPingHosts:(NSString *)host packetCount:(int)count;
+- (void)startPingIp:(NSString *)ip packetCount:(int)count;
 
 - (void)stopPing;
 - (BOOL)isPing;
