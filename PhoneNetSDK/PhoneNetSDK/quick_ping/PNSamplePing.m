@@ -38,10 +38,10 @@
 - (void)stopPing
 {
     self.isStopPingThread = YES;
-    shutdown(socket_client, SHUT_RDWR); //
+    shutdown(socket_client, SHUT_RDWR);
     close(socket_client);
     [self.delegate simplePing:self finished:self.host];
-    log4cplus_debug("PhoneNetPing", "ping complete..\n");
+    log4cplus_debug("PhoneNetSDK-LanScanner", "scan ip %s end...",[self.host UTF8String]);
 }
 
 - (BOOL)isPing
@@ -56,7 +56,7 @@
     remote_addr.sin_addr.s_addr = inet_addr(hostaddr);
     struct timeval timeout;
     timeout.tv_sec = 0;
-    timeout.tv_usec = 1000*100;
+    timeout.tv_usec = 1000*200;
     socket_client = socket(AF_INET,SOCK_DGRAM,IPPROTO_ICMP);
     int nZero=0;
     setsockopt(socket_client,SOL_SOCKET,SO_SNDBUF,(char *)&nZero,sizeof(nZero));
@@ -72,13 +72,14 @@
 
 - (void)startPingIp:(NSString *)ip packetCount:(int)count
 {
+    log4cplus_debug("PhoneNetSDK-LanScanner", "scan ip %s begin...",[ip UTF8String]);
     if ([self settingUHostSocketAddressWithIp:ip]) {
         self.host = ip;
     }
     
     if (self.host == NULL) {
         self.isStopPingThread = YES;
-        log4cplus_warn("PhoneNetSimplePing", "There is no valid ip...\n");
+        log4cplus_warn("PhoneNetSDK-LanScanner", "There is no valid ip...\n");
         return;
     }
     
@@ -101,7 +102,7 @@
         UICMPPacket *packet = [PhoneNetDiagnosisHelper constructPacketWithSeq:index andIdentifier:identifier];
         ssize_t sent = sendto(socket_client, packet, sizeof(UICMPPacket), 0, (struct sockaddr *)&remote_addr, (socklen_t)sizeof(struct sockaddr));
         if (sent < 0) {
-            log4cplus_warn("PhoneNetPing", "ping %s , error code:%d, send icmp packet error..\n",[self.host UTF8String],(int)sent);
+            log4cplus_warn("PhoneNetSDK-LanScanner", "ping %s , error code:%d, send icmp packet error..\n",[self.host UTF8String],(int)sent);
             [self stopPing];
             break;
         }
@@ -114,12 +115,10 @@
         size_t bytesRead = recvfrom(socket_client, buffer, 65535, 0, (struct sockaddr *)&ret_addr, &addrLen);
         
         if ((int)bytesRead < 0) {
-            
-            //            NSLog(@"PhoneNetPing , ping %@ , receive icmp packet timeout..\n",self.host );
             [self.delegate simplePing:self didTimeOut:self.host];
             res = YES;
         }else if(bytesRead == 0){
-            log4cplus_warn("PhoneNetPing", "ping %s , receive icmp packet error , bytesRead=0",[self.host UTF8String]);
+            log4cplus_warn("PhoneNetSDK-LanScanner", "ping %s , receive icmp packet error , bytesRead=0",[self.host UTF8String]);
         }else{
             
             if ([PhoneNetDiagnosisHelper isValidPingResponseWithBuffer:(char *)buffer len:(int)bytesRead]) {

@@ -12,12 +12,13 @@
 #import "PNetModel.h"
 #import "PNetworkCalculator.h"
 #import "PNSamplePing.m"
+#import "PhoneNetSDKConst.h"
+#include "log4cplus_pn.h"
 
 @interface PNetMLanScanner()<PNSamplePingDelegate>
-@property (nonatomic,assign) int index;
-@property (nonatomic,copy) NSArray *arrayList;
+@property (nonatomic,assign) int cursor;
+@property (nonatomic,copy) NSArray *ipList;
 @property (nonatomic,strong) NSMutableArray *activedIps;
-
 @property (nonatomic,strong) PNSamplePing *samplePing;
 @end
 
@@ -41,9 +42,26 @@
     return _samplePing;
 }
 
-- (void)start
+- (instancetype)init
 {
-    _index = 0;
+    if (self = [super init]) {
+        _cursor = 0;
+        [self addObserver:self forKeyPath:@"cursor" options:NSKeyValueObservingOptionNew context:NULL];
+    }
+    return self;
+}
+
+static PNetMLanScanner *lanScanner_instance = nil;
++ (instancetype)shareInstance
+{
+    if (!lanScanner_instance) {
+        lanScanner_instance = [[PNetMLanScanner alloc] init];
+    }
+    return lanScanner_instance;
+}
+
+- (void)scan
+{
     PNetInfoTool *phoneNetTool = [PNetInfoTool shareInstance];
     [phoneNetTool refreshNetInfo];
     if ([phoneNetTool.pGetNetworkType isEqualToString:@"WIFI"]) {
@@ -52,20 +70,17 @@
         NSString *ip = device.wifiIPV4;
         NSString *netMask = device.wifiNetmask;
         if (ip && netMask) {
-            _arrayList = [PNetworkCalculator getAllHostsForIP:ip andSubnet:netMask];
-            if (!_arrayList && _arrayList.count <= 0) {
-                NSLog(@"计算ip列表失败...");
+            log4cplus_debug("PhoneNetSDK-LanScanner", "now device ip :%s , netMask:%s \n",[ip UTF8String],[netMask UTF8String]);
+            _ipList = [PNetworkCalculator getAllHostsForIP:ip andSubnet:netMask];
+            if (!_ipList && _ipList.count <= 0) {
+                log4cplus_error("PhoneNetSDK-LanScanner", "caculating the ip list in the current LAN failed...\n");
                 return;
             }
-            NSLog(@"qizhang---debug--netmask:%@----ip :%@",netMask,ip);
-            NSLog(@"qizhang---debug---iplist: %@",_arrayList);
-            [self.samplePing startPingIp:self.arrayList[_index] packetCount:3];
-            _index++;
+            log4cplus_debug("PhoneNetSDK-LanScanner", "scan ip %s begin...",[self.ipList[self.cursor] UTF8String]);
+            [self.samplePing startPingIp:self.ipList[self.cursor] packetCount:3];
+            self.cursor++;
         }
-        
     }
-    
-   
 }
 
 #pragma mark - PNSamplePingDelegate
@@ -76,7 +91,8 @@
 
 - (void)simplePing:(PNSamplePing *)samplePing receivedPacket:(NSString *)ip
 {
-    NSLog(@"qizhang--debug----activited ip : %@",ip);
+    log4cplus_debug("PhoneNetSDK-LanScanner", " %s  active",[ip UTF8String]);
+    [self.delegate scanMLan:self activeIp:ip];
 }
 
 - (void)simplePing:(PNSamplePing *)samplePing pingError:(NSException *)exception
@@ -86,14 +102,38 @@
 
 - (void)simplePing:(PNSamplePing *)samplePing finished:(NSString *)ip
 {
-    NSLog(@"qizhang--debug----finished : %@",ip);
+    
     _samplePing = nil;
     _samplePing = [[PNSamplePing alloc] init];
     _samplePing.delegate = self;
-    if (self.index < self.arrayList.count) {
-        [_samplePing startPingIp:self.arrayList[self.index] packetCount:2];
+    if (self.cursor < self.ipList.count) {
+        [_samplePing startPingIp:self.ipList[self.cursor] packetCount:2];
     }
-    _index++;
+    self.cursor++;
 }
 
+- (void)resetPropertys
+{
+    _cursor = 0;
+    _ipList = nil;
+    _activedIps = nil;
+    log4cplus_debug("PhoneNetSDK-LanScanner", "reseter propertys...\n");
+}
+
+#pragma mark - use KVO to observer progress
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+{
+    float newCursor = [[change objectForKey:@"new"] floatValue];
+    if ([keyPath isEqualToString:@"cursor"]) {
+        float percent = self.ipList.count == 0 ? 0.0f : ((float)newCursor/self.ipList.count);
+        [self.delegate scanMlan:self percent:percent];
+        log4cplus_debug("PhoneNetSDK-LanScanner", "percent: %f  \n",percent);
+        if (newCursor == self.ipList.count) {
+            log4cplus_debug("PhoneNetSDK-LanScanner", "finish MLAN scan...\n");
+            [self.delegate finishedScanMlan:self];
+            [self removeObserver:self forKeyPath:@"cursor"];
+            [self resetPropertys];
+        }
+    }
+}
 @end
