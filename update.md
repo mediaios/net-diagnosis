@@ -15,6 +15,10 @@
 * Add `udp traceroute` function
 * Fixed some bugs
 
+### v-1.0.11(2019.06.17)
+
+* Add LAN ip scanning function
+
 ## iOS网络诊断SDK版本更新记录
 
 ###v-1.0.3(2019.03.01)
@@ -30,3 +34,7 @@
 * 添加 `tcp ping`功能
 * 添加 `udp traceroute`功能
 * 修复了部分bug
+
+### v-1.0.10(2019.06.17)
+
+* 添加局域网ip扫描功能
