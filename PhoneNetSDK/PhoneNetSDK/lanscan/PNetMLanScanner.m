@@ -11,7 +11,7 @@
 #import "PNetInfoTool.h"
 #import "PNetModel.h"
 #import "PNetworkCalculator.h"
-#import "PNSamplePing.m"
+#import "PNSamplePing.h"
 #import "PhoneNetSDKConst.h"
 #include "log4cplus_pn.h"
 
