@@ -101,6 +101,22 @@ _tcpPing = [PNTcpPing start:hostDomain port:portNum.integerValue count:3 complet
 }];
 ```
 
+### 局域网ip扫描 
+
+如果你要做局域网活跃ip扫描功能的话，那么利用该SDK你可以很快的监听到每个活跃的ip，并且SDK还会返回给你扫描进度。
+
+具体步骤如下： 
+
+1. 创建对象并设置代理`PNetMLanScannerDelegate`
+2. 启动扫描,并通过其代理方法处理活跃的ip
+3. 监听扫描进度(可选)
+
+```
+ PNetMLanScanner *lanScanner = [PNetMLanScanner shareInstance];
+ lanScanner.delegate =  self;
+ [lanScanner scan];
+```
+
 ### 其它功能
 
 * 设置SDK的日志级别

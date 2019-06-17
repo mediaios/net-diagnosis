@@ -100,6 +100,23 @@ In the terminal of mac, enter `traceroute -I baidu.com` to use the ICMP protocol
 }];
 ```
 
+### LAN Scanning 
+
+If you want to do the LAN active ip scanning function, then you can quickly monitor every active ip with the SDK, and the SDK will return to you the scanning progress.
+
+Specific steps are as follows: 
+
+1. Create an object and set the proxy `PNetMLanScannerDelegate`
+2. Start the scan and process the active ip through its delegate method
+3. Monitor scan progress (optional)
+
+```
+ PNetMLanScanner *lanScanner = [PNetMLanScanner shareInstance];
+ lanScanner.delegate =  self;
+ [lanScanner scan];
+```
+
+
 ### Ohter functions
 
 * Setting SDK log level
