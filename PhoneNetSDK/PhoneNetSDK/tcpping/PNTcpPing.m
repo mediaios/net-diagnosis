@@ -2,7 +2,7 @@
 //  PNTcpPing.m
 //  PhoneNetSDK
 //
-//  Created by ethan on 2019/3/11.
+//  Created by mediaios on 2019/3/11.
 //  Copyright © 2019 mediaios. All rights reserved.
 //
 

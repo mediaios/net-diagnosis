@@ -2,7 +2,7 @@
 //  PhoneNetSDK.h
 //  PhoneNetSDK
 //
-//  Created by ethan on 2018/10/15.
+//  Created by mediaios on 2018/10/15.
 //  Copyright © 2018 mediaios. All rights reserved.
 //
 
@@ -21,3 +21,4 @@ FOUNDATION_EXPORT const unsigned char PhoneNetSDKVersionString[];
 #import <PhoneNetSDK/PhoneNetSDKHelper.h>
 #import <PhoneNetSDK/PNTcpPing.h>
 #import <PhoneNetSDK/PNUdpTraceroute.h>
+#import <PhoneNetSDK/PNetMLanScanner.h>

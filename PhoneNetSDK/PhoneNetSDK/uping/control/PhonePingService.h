@@ -2,7 +2,7 @@
 //  PhonePingService.h
 //  PingDemo
 //
-//  Created by ethan on 06/08/2018.
+//  Created by mediaios on 06/08/2018.
 //  Copyright © 2018 mediaios. All rights reserved.
 //
 
