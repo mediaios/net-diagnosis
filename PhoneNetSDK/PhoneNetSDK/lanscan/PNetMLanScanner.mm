@@ -20,6 +20,7 @@
 @property (nonatomic,copy) NSArray *ipList;
 @property (nonatomic,strong) NSMutableArray *activedIps;
 @property (nonatomic,strong) PNSamplePing *samplePing;
+@property (nonatomic,assign,getter=isStopLanScan) BOOL stopLanScan;
 @end
 
 @implementation PNetMLanScanner
@@ -42,6 +43,11 @@
     return _samplePing;
 }
 
+- (BOOL)isScanning
+{
+    return !(self.isStopLanScan);
+}
+
 - (instancetype)init
 {
     if (self = [super init]) {
@@ -50,6 +56,7 @@
     }
     return self;
 }
+
 
 static PNetMLanScanner *lanScanner_instance = nil;
 + (instancetype)shareInstance
@@ -62,6 +69,7 @@ static PNetMLanScanner *lanScanner_instance = nil;
 
 - (void)scan
 {
+    _stopLanScan = NO;
     PNetInfoTool *phoneNetTool = [PNetInfoTool shareInstance];
     [phoneNetTool refreshNetInfo];
     if ([phoneNetTool.pGetNetworkType isEqualToString:@"WIFI"]) {
@@ -83,6 +91,18 @@ static PNetMLanScanner *lanScanner_instance = nil;
     }
 }
 
+- (void)stop
+{
+    _stopLanScan = YES;
+    if ([_samplePing isPing]) {
+        [_samplePing stopPing];
+        _activedIps = nil;
+        _ipList = nil;
+        _cursor = 0;
+    }
+    
+}
+
 #pragma mark - PNSamplePingDelegate
 - (void)simplePing:(PNSamplePing *)samplePing didTimeOut:(NSString *)ip
 {
@@ -102,7 +122,10 @@ static PNetMLanScanner *lanScanner_instance = nil;
 
 - (void)simplePing:(PNSamplePing *)samplePing finished:(NSString *)ip
 {
-    
+    if (self.isStopLanScan) {
+        _samplePing = nil;
+        return;
+    }
     _samplePing = nil;
     _samplePing = [[PNSamplePing alloc] init];
     _samplePing.delegate = self;
@@ -129,9 +152,9 @@ static PNetMLanScanner *lanScanner_instance = nil;
         [self.delegate scanMlan:self percent:percent];
         log4cplus_debug("PhoneNetSDK-LanScanner", "percent: %f  \n",percent);
         if (newCursor == self.ipList.count) {
+            _stopLanScan = YES;
             log4cplus_debug("PhoneNetSDK-LanScanner", "finish MLAN scan...\n");
             [self.delegate finishedScanMlan:self];
-            [self removeObserver:self forKeyPath:@"cursor"];
             [self resetPropertys];
         }
     }

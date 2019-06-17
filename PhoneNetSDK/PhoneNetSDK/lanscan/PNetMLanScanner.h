@@ -59,6 +59,20 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)scan;
 
+
+/**
+ @brief Stop lan scanning
+ */
+- (void)stop;
+
+
+/**
+ @brief Get the status of the current LAN ip scan
+
+ @return YES: scanning; NO: is not scanning
+ */
+- (BOOL)isScanning;
+
 @end
 
 NS_ASSUME_NONNULL_END
