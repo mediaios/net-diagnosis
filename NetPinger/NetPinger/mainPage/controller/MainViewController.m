@@ -14,6 +14,7 @@
 #import "PortScanViewController.h"
 #import "LookupViewController.h"
 #import "TcpPingViewController.h"
+#import "LanScanViewController.h"
 
 @interface MainViewController ()
 @property (nonatomic,copy) NSArray *itemsLabelArray;
@@ -25,6 +26,7 @@
 @property (nonatomic,strong) PortScanViewController *portScanVC;
 @property (nonatomic,strong) LookupViewController *ipDetailsVC;
 @property (nonatomic,strong) TcpPingViewController *tcpPingVC;
+@property (nonatomic,strong) LanScanViewController *lanScanVC;
 @end
 
 @implementation MainViewController
@@ -34,7 +36,7 @@ static NSString * const reuseIdentifier = @"MainItemCell";
 - (NSArray *)itemsImageArray
 {
     if (!_itemsImageArray) {
-        _itemsImageArray = @[@"networkInfo",@"ping",@"tcp_ping",@"traceroute",@"portScan",@"lookup"];
+        _itemsImageArray = @[@"networkInfo",@"ping",@"tcp_ping",@"traceroute",@"portScan",@"lookup",@"lanscan"];
     }
     return _itemsImageArray;
 }
@@ -42,7 +44,7 @@ static NSString * const reuseIdentifier = @"MainItemCell";
 - (NSArray *)itemsLabelArray
 {
     if (!_itemsLabelArray) {
-        _itemsLabelArray = @[@"Network Info",@"Ping",@"Tcp Ping",@"Traceroute",@"Port Scan",@"Lookup"];
+        _itemsLabelArray = @[@"Network Info",@"Ping",@"Tcp Ping",@"Traceroute",@"Port Scan",@"Lookup",@"LAN Scan"];
     }
     return _itemsLabelArray;
 }
@@ -94,6 +96,14 @@ static NSString * const reuseIdentifier = @"MainItemCell";
         _tcpPingVC = [[TcpPingViewController alloc] initWithNibName:@"TcpPingViewController" bundle:nil];
     }
     return _tcpPingVC;
+}
+
+- (LanScanViewController *)lanScanVC
+{
+    if (!_lanScanVC) {
+        _lanScanVC = [[LanScanViewController alloc] initWithNibName:@"LanScanViewController" bundle:nil];
+    }
+    return _lanScanVC;
 }
 
 
@@ -179,45 +189,35 @@ static NSString * const reuseIdentifier = @"MainItemCell";
             [self.navigationController pushViewController:self.ipDetailsVC animated:YES];
         }
             break;
+        case 6:
+        {
+            PDeviceNetInfo *deviceNet = [[PhoneNetManager shareInstance] netGetNetworkInfo].deviceNetInfo;
+            if([deviceNet.netType isEqualToString:@"WIFI"]){
+                 [self.navigationController pushViewController:self.lanScanVC animated:YES];
+            }else{
+                [self showAlertInfo];
+            }
+        }
+            break;
           
         default:
             break;
     }
 }
 
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
     return CGSizeMake(collectionView.frame.size.width/3 - 8, collectionView.frame.size.width/3);
+}
+
+- (void)showAlertInfo
+{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Lan Scanning" message:@"You are not connected to wifi" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+    [alertController addAction:okAction];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 @end

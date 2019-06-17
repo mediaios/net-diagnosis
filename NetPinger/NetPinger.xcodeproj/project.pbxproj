@@ -32,6 +32,8 @@
 		AA829BAA223B3B7F0007E397 /* TcpPingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA829BA8223B3B7F0007E397 /* TcpPingViewController.m */; };
 		AA829BAB223B3B7F0007E397 /* TcpPingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA829BA9223B3B7F0007E397 /* TcpPingViewController.xib */; };
 		AA829BAF223B8E3D0007E397 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA829BAE223B8E3D0007E397 /* SettingViewController.m */; };
+		AA84BA7A22B7801E00A68F44 /* LanScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA84BA7822B7801E00A68F44 /* LanScanViewController.m */; };
+		AA84BA7B22B7801E00A68F44 /* LanScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA84BA7922B7801E00A68F44 /* LanScanViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,9 @@
 		AA829BA9223B3B7F0007E397 /* TcpPingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TcpPingViewController.xib; sourceTree = "<group>"; };
 		AA829BAD223B8E3D0007E397 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		AA829BAE223B8E3D0007E397 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		AA84BA7722B7801E00A68F44 /* LanScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanScanViewController.h; sourceTree = "<group>"; };
+		AA84BA7822B7801E00A68F44 /* LanScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LanScanViewController.m; sourceTree = "<group>"; };
+		AA84BA7922B7801E00A68F44 /* LanScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanScanViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +174,7 @@
 			children = (
 				AA829BAC223B8E2C0007E397 /* setting */,
 				AA4DDDFD21773BF9009F138B /* lookup */,
+				AA84BA6D22B77EE700A68F44 /* lanScan */,
 				AA4DDDFC21773BF2009F138B /* portScan */,
 				AA4DDDF621773ABA009F138B /* tracert */,
 				AA4DDDF021773A9C009F138B /* deviceNetInfo */,
@@ -304,6 +310,16 @@
 			path = setting;
 			sourceTree = "<group>";
 		};
+		AA84BA6D22B77EE700A68F44 /* lanScan */ = {
+			isa = PBXGroup;
+			children = (
+				AA84BA7722B7801E00A68F44 /* LanScanViewController.h */,
+				AA84BA7822B7801E00A68F44 /* LanScanViewController.m */,
+				AA84BA7922B7801E00A68F44 /* LanScanViewController.xib */,
+			);
+			path = lanScan;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -411,6 +427,7 @@
 				AA4DDDFB21773ACE009F138B /* TracertViewController.xib in Resources */,
 				AA4DDDB6217708A5009F138B /* LaunchScreen.storyboard in Resources */,
 				AA4DDDE221771698009F138B /* MainItemCell.xib in Resources */,
+				AA84BA7B22B7801E00A68F44 /* LanScanViewController.xib in Resources */,
 				AA4DDDF521773AB4009F138B /* DeviceNetInfoViewController.xib in Resources */,
 				AA4DDE0221773C0D009F138B /* PortScanViewController.xib in Resources */,
 				AA4DDDB3217708A5009F138B /* Assets.xcassets in Resources */,
@@ -471,6 +488,7 @@
 				AA4DDE0621773C1C009F138B /* LookupViewController.m in Sources */,
 				AA4DDDF421773AB4009F138B /* DeviceNetInfoViewController.m in Sources */,
 				AA4DDDB9217708A5009F138B /* main.m in Sources */,
+				AA84BA7A22B7801E00A68F44 /* LanScanViewController.m in Sources */,
 				AA4DDE0121773C0D009F138B /* PortScanViewController.m in Sources */,
 				AA4DDDE6217722BE009F138B /* MainItemInfo.m in Sources */,
 				AA4DDDE121771698009F138B /* MainItemCell.m in Sources */,
