@@ -260,7 +260,7 @@
 			path = udptracert;
 			sourceTree = "<group>";
 		};
-		AAA1BDDC22A7A6AD00C0D7F5 /* quick_ping */ = {
+		AAA1BDDC22A7A6AD00C0D7F5 /* lanscan */ = {
 			isa = PBXGroup;
 			children = (
 				AAA1BDE122A7B36D00C0D7F5 /* PNetMLanScanner.h */,
@@ -268,7 +268,7 @@
 				3D874B8222A8033900DA8AA8 /* PNSamplePing.h */,
 				3D874B8322A8033900DA8AA8 /* PNSamplePing.m */,
 			);
-			path = quick_ping;
+			path = lanscan;
 			sourceTree = "<group>";
 		};
 		AAA4AC432227AE3C00C8AC65 /* lookup */ = {
@@ -347,7 +347,7 @@
 				AAFC6781217436B300044085 /* public */,
 				AA466F7F221FBCD1009CD053 /* common */,
 				AA466F84221FBCDA009CD053 /* uping */,
-				AAA1BDDC22A7A6AD00C0D7F5 /* quick_ping */,
+				AAA1BDDC22A7A6AD00C0D7F5 /* lanscan */,
 				AA2B9D9D2236646200928AF1 /* tcpping */,
 				AA4DDD762174A188009F138B /* utracert */,
 				AA829BA2223907E40007E397 /* udptracert */,
