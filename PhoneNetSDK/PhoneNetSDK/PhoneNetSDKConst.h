@@ -21,7 +21,7 @@
 
 /***********      Global define       ***********/
 #define      PhoneNotification       [NSNotificationCenter defaultCenter]
-#define      PhoneNetSDKVersion      @"1.0.8"
+#define      PhoneNetSDKVersion      @"1.0.11"
 
 /***********      Ping model       ***********/
 #define   KPingIcmpIdBeginNum     8000
