@@ -65,6 +65,12 @@ typedef void (^PNTcpPingHandler)(NSMutableString *);
 - (void)stopTcpPing;
 
 
+/**
+ @brief processing long tcp conn(ip or port can not be connected)
+ */
+- (void)processLongConn;
+
+
 @end
 
 
