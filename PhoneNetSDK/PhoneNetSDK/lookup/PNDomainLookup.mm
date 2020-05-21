@@ -22,19 +22,20 @@
 
 @implementation PNDomainLookup
 
-static PNDomainLookup *pnDomainLookup_instance = NULL;
 - (instancetype)init
 {
     if (self = [super init]) {}
     return self;
 }
 
-+ (instancetype)shareInstance
-{
-    if (pnDomainLookup_instance == NULL) {
-        pnDomainLookup_instance = [[PNDomainLookup alloc] init];
-    }
-    return pnDomainLookup_instance;
++ (instancetype)shareInstance {
+    static PNDomainLookup *instance = nil;
+    static dispatch_once_t onceToken;
+
+    dispatch_once(&onceToken, ^{
+        instance = [[PNDomainLookup alloc] init];
+    });
+    return instance;
 }
 
 - (void)lookupDomain:(NSString * _Nonnull)domain completeHandler:(NetLookupResultHandler _Nonnull)handler;

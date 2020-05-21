@@ -15,7 +15,6 @@
 
 @implementation PhoneTraceRouteService
 
-static PhoneTraceRouteService *ucTraceRouteService_instance = NULL;
 
 - (instancetype)init
 {
@@ -26,12 +25,14 @@ static PhoneTraceRouteService *ucTraceRouteService_instance = NULL;
     return self;
 }
 
-+ (instancetype)shareInstance
-{
-    if (ucTraceRouteService_instance == NULL) {
-        ucTraceRouteService_instance = [[PhoneTraceRouteService alloc] init];
-    }
-    return ucTraceRouteService_instance;
++ (instancetype)shareInstance {
+    static PhoneTraceRouteService *instance = nil;
+    static dispatch_once_t onceToken;
+
+    dispatch_once(&onceToken, ^{
+        instance = [[PhoneTraceRouteService alloc] init];
+    });
+    return instance;
 }
 
 - (void)uStopTracert
