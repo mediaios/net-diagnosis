@@ -45,14 +45,14 @@ static NSString * const U_4G           = @"4G";
 @implementation PNetInfoTool
 
 
-static PNetInfoTool *pNetInfoTool_instance = NULL;
++ (instancetype)shareInstance {
+    static PNetInfoTool *instance = nil;
+    static dispatch_once_t onceToken;
 
-+ (instancetype)shareInstance
-{
-    if (pNetInfoTool_instance == NULL) {
-        pNetInfoTool_instance = [[PNetInfoTool alloc] init];
-    }
-    return pNetInfoTool_instance;
+    dispatch_once(&onceToken, ^{
+        instance = [[PNetInfoTool alloc] init];
+    });
+    return instance;
 }
 
 - (void)refreshNetInfo

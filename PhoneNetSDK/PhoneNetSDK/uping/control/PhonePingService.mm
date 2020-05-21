@@ -20,8 +20,6 @@
 
 @implementation PhonePingService
 
-static PhonePingService *ucPingservice_instance = NULL;
-
 - (instancetype)init
 {
     self = [super init];
@@ -39,12 +37,14 @@ static PhonePingService *ucPingservice_instance = NULL;
     return _pingResDic;
 }
 
-+ (instancetype)shareInstance
-{
-    if (ucPingservice_instance == NULL) {
-        ucPingservice_instance = [[PhonePingService alloc] init];
-    }
-    return ucPingservice_instance;
++ (instancetype)shareInstance {
+    static PhonePingService *instance = nil;
+    static dispatch_once_t onceToken;
+
+    dispatch_once(&onceToken, ^{
+        instance = [[PhonePingService alloc] init];
+    });
+    return instance;
 }
 
 - (void)uStopPing

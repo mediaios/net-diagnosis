@@ -21,7 +21,7 @@
 @end
 
 @implementation PNPortScan
-static PNPortScan *pnPortScan_instance = NULL;
+
 - (instancetype)init
 {
     if (self = [super init]) {
@@ -30,12 +30,14 @@ static PNPortScan *pnPortScan_instance = NULL;
     return self;
 }
 
-+ (instancetype)shareInstance
-{
-    if (pnPortScan_instance == NULL) {
-        pnPortScan_instance = [[PNPortScan alloc] init];
-    }
-    return pnPortScan_instance;
++ (instancetype)shareInstance {
+    static PNPortScan *instance = nil;
+    static dispatch_once_t onceToken;
+
+    dispatch_once(&onceToken, ^{
+        instance = [[PNPortScan alloc] init];
+    });
+    return instance;
 }
 
 - (void)startPortScan:(NSString *)host beginPort:(NSUInteger)beginPort endPort:(NSUInteger)endPort completeHandler:(NetPortScanHandler)handler
