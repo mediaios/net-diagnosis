@@ -134,6 +134,7 @@
         if (isReceiverRemoteIpPingRes) {
             index++;
         }
+        free(packet);
         usleep(1000*500);
     } while (!self.isStopPingThread && index < _pingPacketCount && isReceiverRemoteIpPingRes);
     
@@ -193,6 +194,7 @@
         
         usleep(500);
     }
+    free(buffer);
     return res;
 }
 

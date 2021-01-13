@@ -174,6 +174,7 @@
                 }
             }
         }
+        CFRelease(hostRef);
     }
     
     return [resolve copy];

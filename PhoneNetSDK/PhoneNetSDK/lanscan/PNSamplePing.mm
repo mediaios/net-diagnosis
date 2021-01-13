@@ -100,6 +100,7 @@
         uint16_t identifier = (uint16_t)(KPingIcmpIdBeginNum + index);
         UICMPPacket *packet = [PhoneNetDiagnosisHelper constructPacketWithSeq:index andIdentifier:identifier];
         ssize_t sent = sendto(lan_scan_socket_client, packet, sizeof(UICMPPacket), 0, (struct sockaddr *)&lan_scan_remote_addr, (socklen_t)sizeof(struct sockaddr));
+        free(packet);
         if (sent < 0) {
             log4cplus_warn("PhoneNetSDK-LanScanner", "ping %s , error code:%d, send icmp packet error..\n",[self.scanIp UTF8String],(int)sent);
             [self stopPing];
@@ -123,6 +124,7 @@
             if ([PhoneNetDiagnosisHelper isValidPingResponseWithBuffer:(char *)buffer len:(int)bytesRead]) {
                 [self.delegate simplePing:self receivedPacket:self.scanIp];
                 [self stopPing];
+                free(buffer);
                 break;
             }
         }
@@ -130,6 +132,7 @@
         if (res) {
             index++;
         }
+        free(buffer);
         usleep(1000);
     } while (!self.isStopPingThread && index < _sendPacketCount);
     
